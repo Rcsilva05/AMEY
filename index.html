@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amey Clinic - Odontologia Consciente</title>
+    
+    <!-- Font Awesome (ícones line) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --verde-amey: #6B7D5A;
+            --off-white: #F5F2EC;
+            --bege-claro: #EFEAE3;
+            --cinza-escuro: #6E6E6E;
+            --texto-principal: #3F3F3F;
+            --detalhes: #CFC7BC;
+            
+            --font-titulos: 'Playfair Display', serif;
+            --font-textos: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-textos);
+            color: var(--texto-principal);
+            background-color: var(--off-white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== TIPOGRAFIA ===== */
+        h1, h2, h3, h4 {
+            font-family: var(--font-titulos);
+            font-weight: 500;
+            color: var(--texto-principal);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--texto-principal);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            color: var(--texto-principal);
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--verde-amey);
+            margin-top: 10px;
+        }
+
+        h2.center {
+            text-align: center;
+        }
+
+        h2.center:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h3 {
+            color: var(--verde-amey);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: var(--verde-amey);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--texto-principal);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .section-subtitle.center {
+            text-align: center;
+        }
+
+        /* ===== BOTÕES ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: transparent;
+            border: 1px solid var(--verde-amey);
+            border-radius: 24px;
+            font-family: var(--font-textos);
+            font-weight: 500;
+            color: var(--verde-amey);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: none;
+        }
+
+        .btn:hover {
+            background: var(--verde-amey);
+            color: var(--off-white);
+        }
+
+        .btn-primary {
+            background: var(--verde-amey);
+            color: var(--off-white);
+            border: 1px solid var(--verde-amey);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--verde-amey);
+        }
+
+        /* ===== NAVEGAÇÃO ===== */
+        .navbar {
+           
+            top: 0;
+            width: 100%;
+            background: var(--off-white);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--detalhes);
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto-principal);
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-amey);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--verde-amey);
+        }
+
+        /* ===== HERO / CAPA ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--off-white);
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--texto-principal);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hero-cards {
+            display: flex;
+            gap: 30px;
+            margin-top: 60px;
+            grid-column: span 2;
+        }
+
+        .hero-card {
+            background: var(--bege-claro);
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        .hero-card h3 {
+            color: var(--verde-amey);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .hero-card p {
+            color: var(--texto-principal);
+        }
+
+        /* ===== QUEM SOMOS ===== */
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            margin-bottom: 70px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--verde-amey);
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            line-height: 1.7;
+            color: var(--texto-principal);
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 520px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* ===== PILARES ===== */
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pilar {
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .pilar i {
+            font-size: 2.4rem;
+            color: var(--verde-amey);
+            margin-bottom: 15px;
+            stroke-width: 1px;
+        }
+
+        .pilar h4 {
+            font-family: var(--font-titulos);
+            color: var(--verde-amey);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .pilar p {
+            font-size: 0.95rem;
+            color: var(--texto-principal);
+            line-height: 1.5;
+        }
+
+        /* ===== TRATAMENTOS ===== */
+        .tratamentos-section {
+            padding: 80px 0;
+            background: var(--off-white);
+        }
+
+        .treatment-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .treatment-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .treatment-image {
+            position: relative;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .treatment-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .treatment-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--verde-amey);
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .treatment-info {
+            padding: 20px;
+        }
+
+        .treatment-info h3 {
+            color: var(--verde-amey);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: var(--font-titulos);
+        }
+
+        .treatment-info p {
+            color: var(--texto-principal);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .treatment-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .treatment-benefits li {
+            color: var(--texto-principal);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .treatment-benefits li:before {
+            content: "•";
+            color: var(--verde-amey);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        /* ===== AVALIAÇÕES ===== */
+        .google-reviews-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .google-logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .google-reviews-header h2 {
+            margin-bottom: 0;
+        }
+
+        .google-reviews-header h2:after {
+            display: none;
+        }
+
+        .avaliacoes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .avaliacao-card {
+            background: var(--bege-claro);
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--detalhes);
+        }
+
+        .avaliacao-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .avaliacao-foto {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--verde-amey);
+            flex-shrink: 0;
+        }
+
+        .avaliacao-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avaliacao-info {
+            flex: 1;
+        }
+
+        .avaliacao-info strong {
+            color: var(--verde-amey);
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .avaliacao-info .avaliacao-meta {
+            font-size: 0.85rem;
+            color: var(--texto-principal);
+            opacity: 0.7;
+            margin: 2px 0 5px;
+        }
+
+        .estrelas {
+            color: #D4AF37;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .estrelas i {
+            margin-right: 2px;
+        }
+
+        .avaliacao-data {
+            font-size: 0.85rem;
+            color: var(--texto-principal);
+            opacity: 0.6;
+            margin: 10px 0 15px;
+            font-style: italic;
+        }
+
+        .avaliacao-card p {
+            color: var(--texto-principal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-line;
+            margin-top: 10px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-container {
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .faq-categoria {
+            margin-bottom: 30px;
+        }
+
+        .faq-categoria h3 {
+            font-family: var(--font-titulos);
+            color: var(--verde-amey);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            border-bottom: 1px solid var(--detalhes);
+            padding-bottom: 10px;
+        }
+
+        .faq-item {
+            background: var(--bege-claro);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--detalhes);
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--texto-principal);
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(107, 125, 90, 0.05);
+        }
+
+        .faq-question i {
+            color: var(--verde-amey);
+            transition: transform 0.3s;
+            font-size: 1rem;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--texto-principal);
+            border-top: 0px solid transparent;
+        }
+
+        .faq-answer.show {
+            padding: 0 20px 20px;
+            max-height: 500px;
+            border-top: 1px solid var(--detalhes);
+        }
+
+        .faq-answer strong {
+            color: var(--verde-amey);
+        }
+
+        /* ===== BLOCO FINAL ===== */
+        .bloco-final {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: center;
+            background: var(--bege-claro);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--detalhes);
+        }
+
+        .bloco-final-image {
+            position: relative;
+            height: 500px;
+        }
+
+        .bloco-final-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bloco-final-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--off-white);
+            opacity: 0.08;
+        }
+
+        .bloco-final-content {
+            padding: 60px;
+        }
+
+        .bloco-final-content h2 {
+            color: var(--verde-amey);
+            margin-bottom: 30px;
+        }
+
+        .bloco-final-content h2:after {
+            display: none;
+        }
+
+        .bloco-final-content p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-family: var(--font-titulos);
+            color: var(--texto-principal);
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: var(--cinza-escuro);
+            color: var(--off-white);
+            padding: 40px 0 10px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--off-white);
+            font-family: var(--font-titulos);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: var(--off-white);
+            text-decoration: none;
+            line-height: 1.8;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo p {
+            font-style: italic;
+            margin-top: 10px;
+            color: var(--off-white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--detalhes);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--off-white);
+            opacity: 0.8;
+        }
+
+        /* ===== WHATSAPP FIXO ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--verde-amey);
+            color: var(--off-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            border: 1px solid var(--off-white);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: var(--off-white);
+            color: var(--verde-amey);
+            border: 1px solid var(--verde-amey);
+        }
+
+        /* ===== UTILITÁRIOS ===== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 40px;
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-cards {
+                grid-column: span 1;
+            }
+            
+            .pilares-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .treatment-row {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 60px;
+            }
+            
+            .treatment-image {
+                height: 350px;
+                order: 1;
+            }
+            
+            .treatment-info {
+                order: 2;
+                padding: 0;
+            }
+            
+            .left-image, .right-image {
+                order: 1;
+            }
+            
+            .avaliacoes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .bloco-final {
+                grid-template-columns: 1fr;
+            }
+            
+            .bloco-final-image {
+                height: 300px;
+            }
+            
+            .about-wrapper {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            
+            .about-text h2:after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                width: 100%;
+                background: var(--off-white);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-bottom: 1px solid var(--detalhes);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .pilares-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-cards {
+                flex-direction: column;
+            }
+            
+            .bloco-final-content {
+                padding: 40px 20px;
+                text-align: center;
+            }
+            
+            .faq-categoria h3 {
+                font-size: 1.2rem;
+            }
+            
+            .treatment-info h3 {
+                font-size: 1.8rem;
+            }
+            
+            .google-reviews-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logo img {
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#home" class="logo">
+            <!-- LOGO NO TOPO -->
+            <img src="logoamey.png" alt="Amey Clinic" style="height: 160px; width: auto;">
+        </a>
+        
+        <button class="hamburger" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#tratamentos">Tratamentos</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- HOME / CAPA -->
+<section id="home" class="hero">
+    <div class="container" style="color:#6E6E6E">
+        <div class="hero-text">
+            <h1>Cuidar do seu sorriso<br>é cuidar de você.</h1>
+            <p>Desde 2011, a Amey Clinic constrói um cuidado odontológico baseado em consciência, técnica e atenção verdadeira às pessoas.</p>
+            <a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn-primary" target="_blank">Agendar consulta de diagnóstico</a>
+        </div>
+        
+        <div>
+            <img src="entrada.PNG" alt="Recepção Amey Clinic" class="hero-image">
+        </div>
+        
+        <div class="hero-cards">
+            <div class="hero-card">
+                <h3>Experiência consolidada</h3>
+                <p>Cuidado odontológico realizado com responsabilidade, consciência e segurança.</p>
+            </div>
+            <div class="hero-card">
+                <h3>Desde 2011</h3>
+                <p>Cuidando de sorrisos e transformando vidas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section id="quem-somos" style="padding: 80px 0; background: var(--off-white);">
+    <div class="container" style="color: #6E6E6E;">
+        <div class="about-wrapper">
+            <div class="about-text">
+                <h2>Quem Somos</h2>
+                <p>A Amey Clinic nasceu em 2011 com um propósito claro: oferecer um cuidado odontológico consciente, humano e baseado em evidências científicas.</p>
+                <p>Aqui, não cuidamos apenas dos dentes. Cuidamos das pessoas, da história por trás de cada sorriso e das decisões que impactam a saúde ao longo da vida.</p>
+                <p>Nosso papel é orientar com clareza, para que cada paciente se sinta seguro, respeitado e bem informado. Unimos técnica, acolhimento e responsabilidade para construir tratamentos éticos, personalizados e conscientes.</p>
+            </div>
+            <div class="about-image">
+                <img src="familianós.jpg" alt="Amey Clinic">
+            </div>
+        </div>
+
+        <h3 style="font-family: var(--font-titulos); color: var(--verde-amey); text-align: center; margin: 60px 0 20px;">Nossos pilares</h3>
+        
+        <div class="pilares-grid">
+            <div class="pilar">
+                <i class="fas fa-brain"></i>
+                <h4>Consciência</h4>
+                <p>Decisões claras, diagnósticos responsáveis e orientação consciente.</p>
+            </div>
+            <div class="pilar">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Segurança</h4>
+                <p>Ciência, protocolos bem definidos e tecnologia confiável.</p>
+            </div>
+            <div class="pilar">
+                <i class="fas fa-handshake"></i>
+                <h4>Confiança</h4>
+                <p>Relações transparentes, respeito ao tempo e às escolhas.</p>
+            </div>
+            <div class="pilar">
+                <i class="fas fa-heart"></i>
+                <h4>Acolhimento</h4>
+                <p>Aqui, seu conforto emocional e físico são prioridade em cada atendimento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOSSOS TRATAMENTOS -->
+<section id="tratamentos" class="tratamentos-section">
+    <div class="container" style="color: #3F3F3F;">
+        <h2 class="center">Nossos Tratamentos</h2>
+        <p class="section-subtitle center">Conheça nossas áreas de atuação. Cada cuidado começa com orientação e planejamento.</p>
+        
+        <!-- Tratamento 1 - Reabilitação Oral (Imagem à direita) -->
+        <div class="treatment-row">
+            <div class="treatment-info">
+                <h3>Reabilitação Oral</h3>
+                <p>Planejamento completo para devolver função, conforto e estética através de técnicas avançadas e materiais de alta qualidade.</p>
+                <ul class="treatment-benefits">
+                    <li>Restauração completa da função mastigatória</li>
+                    <li>Harmonização estética do sorriso</li>
+                    <li>Correção de desgastes e fraturas</li>
+                    <li>Devolução da autoestima e confiança</li>
+                </ul>
+            </div>
+            <div class="treatment-image right-image">
+                <img src="implante.jpg" alt="Reabilitação Oral">
+            </div>
+        </div>
+
+        <!-- Tratamento 2 - Implantes Dentários (Imagem à esquerda) -->
+        <div class="treatment-row">
+            <div class="treatment-image left-image">
+                <img src="mulher loira.png" alt="Implantes Dentários">
+            </div>
+            <div class="treatment-info">
+                <h3>Implantes</h3>
+                <p>Substituímos dentes perdidos ou comprometidos por implantes fixos e naturais, devolvendo a funcionalidade e a estética do sorriso.</p>
+                <ul class="treatment-benefits">
+                    <li>Substituição de dentes perdidos</li>
+                    <li>Melhoria na mastigação e fala</li>
+                    <li>Prevenção da perda óssea na região do implante</li>
+                    <li>Estética natural, semelhante ao dente original</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tratamento 3 - Ortodontia (Imagem à direita) -->
+        <div class="treatment-row">
+            <div class="treatment-info">
+                <h3>Ortodontia</h3>
+                <p>Corrigimos a posição dos dentes e maxilares, garantindo alinhamento perfeito e funcionalidade para o seu sorriso com opções modernas de aparelhos para atender às suas necessidades.</p>
+                <ul class="treatment-benefits">
+                    <li>Melhora da estética do sorriso</li>
+                    <li>Correção de problemas de mordida e alinhamento</li>
+                    <li>Prevenção de desgaste dental e dores na mandíbula</li>
+                    <li>Opções de tratamento modernas e confortáveis</li>
+                </ul>
+            </div>
+            <div class="treatment-image right-image">
+                <img src="mulher olhando pra vc.png" alt="Aparelho Ortodôntico">
+            </div>
+        </div>
+
+        <!-- Tratamento 4 - Prótese Dentária (Imagem à esquerda) -->
+        <div class="treatment-row">
+            <div class="treatment-image left-image">
+                <img src="prótese.PNG" alt="Prótese Dentária">
+            </div>
+            <div class="treatment-info">
+                <h3>Próteses</h3>
+                <p>Substituímos dentes perdidos ou comprometidos com próteses fixas ou removíveis, devolvendo a funcionalidade e a estética do sorriso.</p>
+                <ul class="treatment-benefits">
+                    <li>Restauração da mastigação e fala</li>
+                    <li>Estética natural e harmoniosa</li>
+                    <li>Solução adaptada às necessidades do paciente</li>
+                    <li>Conforto e segurança no uso diário</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tratamento 5 - Clínico Geral (Imagem à direita) -->
+        <div class="treatment-row">
+            <div class="treatment-info">
+                <h3>Clínico geral</h3>
+                <p>Cuidamos da sua saúde bucal com prevenção, orientação e tratamentos como restaurações e fluorterapia.</p>
+                <ul class="treatment-benefits">
+                    <li>Prevenção de cáries e doenças gengivais</li>
+                    <li>Melhoria da saúde bucal como um todo</li>
+                    <li>Restauração de dentes danificados</li>
+                    <li>Promoção de uma higiene bucal mais eficiente</li>
+                </ul>
+            </div>
+            <div class="treatment-image right-image">
+                <img src="clinico-geral.PNG" alt="Clínico Geral">
+            </div>
+        </div>
+
+        <!-- Tratamento 6 - Estética (Imagem à esquerda) -->
+        <div class="treatment-row">
+            <div class="treatment-image left-image">
+                <img src="estética.PNG" alt="Estética Dental">
+            </div>
+            <div class="treatment-info">
+                <h3>Estética</h3>
+                <p>Devolvemos o brilho e a tonalidade natural dos seus dentes com técnicas seguras e eficazes de clareamento.</p>
+                <ul class="treatment-benefits">
+                    <li>Sorriso mais branco e radiante</li>
+                    <li>Procedimento rápido e indolor</li>
+                    <li>Técnicas seguras que preservam a saúde dos dentes</li>
+                    <li>Resultados visíveis e duradouros</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AVALIAÇÕES GOOGLE -->
+<section id="avaliacoes" style="padding: 80px 0; background: var(--bege-claro);">
+    <div class="container"style="color: #3F3F3F;">
+        <div class="google-reviews-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google Logo" class="google-logo">
+            <h2 class="center" style="margin-bottom: 0;">Avaliações do Google</h2>
+        </div>
+        <p class="section-subtitle center">Avaliações reais de pacientes que confiaram no cuidado da Amey Clinic ao longo dos anos.</p>
+        
+        <div class="avaliacoes-grid">
+            <!-- Avaliação 1 - Lucineide Carvalho -->
+            <div class="avaliacao-card">
+                <div class="avaliacao-header">
+                    <div class="avaliacao-foto">
+                        <img src="depoimento 1.PNG" alt="Lucineide Carvalho">
+                    </div>
+                    <div class="avaliacao-info">
+                        <strong>Lucineide Carvalho</strong>
+                        <div class="avaliacao-meta">4 avaliações</div>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="avaliacao-data">9 meses atrás</div>
+                <p>Clínica maravilhosa. Tratamento de qualidade. Profissionais altamente qualificados. Preço justo. Super indico</p>
+            </div>
+
+            <!-- Avaliação 2 - Raphael Silva -->
+            <div class="avaliacao-card">
+                <div class="avaliacao-header">
+                    <div class="avaliacao-foto">
+                        <img src="raphael.png" alt="Raphael Silva">
+                    </div>
+                    <div class="avaliacao-info">
+                        <strong>Raphael Silva</strong>
+                        <div class="avaliacao-meta">5 avaliações</div>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="avaliacao-data">9 meses atrás</div>
+                <p>O Tratamento foi de altíssima qualidade, desde o primeiro atendimento até a finalização do procedimento. A atenção e o cuidado com cada detalhe me deixaram extremamente confiante e satisfeito. Além disso, o preço justo e acessível aliado à excelência do serviço prestado fazem toda a diferença. Recomendo de olhos fechados.</p>
+            </div>
+
+            <!-- Avaliação 3 - Viviane Ribeiro -->
+            <div class="avaliacao-card">
+                <div class="avaliacao-header">
+                    <div class="avaliacao-foto">
+                        <img src="viviane.png" alt="Viviane Ribeiro">
+                    </div>
+                    <div class="avaliacao-info">
+                        <strong>Viviane Ribeiro</strong>
+                        <div class="avaliacao-meta">5 avaliações</div>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="avaliacao-data">7 meses atrás</div>
+                <p>Melhor clínica que já fiz tratamento em minha vida por todas que passei sempre tive problemas e serviços mal feitos, nessa não pelo contrário profissionais exemplares que te dão toda confiança, comecei com uma simples aventuração e terminei com implante então eu digo !!!! Podem fazer qualquer procedimento com eles de olhos fechados, a vocês da clínica nota 10000 e obrigada por tudo ❤️.</p>
+            </div>
+
+            <!-- Avaliação 4 - Orlando Silva Jr -->
+            <div class="avaliacao-card">
+                <div class="avaliacao-header">
+                    <div class="avaliacao-foto">
+                        <img src="orlando avaliação.PNG" alt="Orlando Silva Jr">
+                    </div>
+                    <div class="avaliacao-info">
+                        <strong>Orlando Silva Jr</strong>
+                        <div class="avaliacao-meta">5 avaliações</div>
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="avaliacao-data">1 ano atrás</div>
+                <p>Fui muito bem atendido na clínica desde o primeiro contato. A equipe é extremamente profissional, atenciosa e acolhedora. O ambiente é limpo, moderno e transmite muita confiança. A dentista foi cuidadosa, explicou todo o procedimento com clareza e me deixou muito tranquilo. Senti que minha saúde bucal foi tratada com seriedade e carinho. Recomendo fortemente a todos que buscam um atendimento humanizado, de qualidade e com excelentes resultados. Com certeza voltarei! Super indico!!!!!!</p>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="#" class="btn">Ver mais avaliações no Google</a>
+        </div>
+    </div>
+</section>
+
+<!-- PERGUNTAS FREQUENTES -->
+<section id="faq" style="padding: 80px 0; background: var(--off-white);">
+    <div class="container">
+        <h2 class="center">Perguntas Frequentes</h2>
+        <p class="section-subtitle center">Esclarecemos suas principais dúvidas para que você se sinta seguro(a) em cada etapa do cuidado.</p>
+        
+        <div class="faq-container">
+            <!-- Custos e Valores -->
+            <div class="faq-categoria">
+                <h3>Custos e Valores</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto custará o tratamento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O valor varia conforme o tipo de procedimento e a complexidade do caso. Após a avaliação clínica, apresentamos um plano de tratamento personalizado com os custos detalhados.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O preço muda com o tipo de material ou técnica usada?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sim. Existem diferentes opções de materiais (como resinas, porcelanas, tipos de aparelho etc.), e isso pode influenciar no valor. Sempre explicamos todas as possibilidades para que você escolha o que melhor se encaixa no seu perfil.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problemas Bucais Comuns -->
+            <div class="faq-categoria">
+                <h3>Problemas Bucais Comuns</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Por que meus dentes são sensíveis?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A sensibilidade pode estar ligada ao desgaste do esmalte, retração gengival ou bruxismo. O dentista irá avaliar a causa e indicar o tratamento mais indicado.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que pode causar sangramento na gengiva?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Geralmente está relacionado à gengivite, acúmulo de placa bacteriana ou escovação inadequada. Em alguns casos, pode evoluir para doenças periodontais se não tratado.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Higiene Bucal e Prevenção -->
+            <div class="faq-categoria">
+                <h3>Higiene Bucal e Prevenção</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como escovar corretamente os dentes?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Use uma escova macia, faça movimentos suaves e circulares, escove todas as superfícies dos dentes e não se esqueça da língua. O uso do fio dental é indispensável.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Com que frequência devo escovar os dentes e usar fio dental?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O ideal é escovar pelo menos três vezes ao dia (após as principais refeições) e usar o fio dental pelo menos uma vez ao dia.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como prevenir cáries?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Com boa higiene, alimentação equilibrada, uso de flúor e visitas regulares ao dentista para limpezas e check-ups.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que é placa bacteriana e como evitá-la?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        É uma película que se forma nos dentes e pode causar cáries e inflamações gengivais. A escovação e o fio dental removem essa placa antes que ela se transforme em tártaro.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implante Dentário -->
+            <div class="faq-categoria">
+                <h3>Implante Dentário</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Implante dentário dói?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O procedimento é feito com anestesia local, portanto não causa dor durante a cirurgia. Após o implante, pode haver um leve desconforto ou inchaço nos primeiros dias, controlado com medicação e cuidados simples. A recuperação costuma ser tranquila.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto custa um implante dentário?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Antes de apresentar valores, é necessário realizar uma avaliação clínica e exames, pois o custo pode variar conforme a técnica, necessidade de enxerto e tipo de prótese. Após essa etapa, montamos um plano de tratamento com valores detalhados e opções de parcelamento.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva o tratamento com implante?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O tempo varia conforme o caso, mas em média leva de 3 a 6 meses, incluindo a fase de cicatrização (osseointegração). Em casos favoráveis, é possível colocar o dente provisório no mesmo dia (carga imediata).
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Todo mundo pode colocar implante?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Na maioria dos casos, sim. É necessária uma avaliação clínica e exames de imagem para verificar a quantidade e qualidade óssea. Algumas condições de saúde exigem cuidados específicos, mas raramente impedem o tratamento.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que acontece se eu NÃO substituir um dente perdido?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A ausência de um dente pode causar perda óssea, desvio na mordida, movimentação dos dentes vizinhos, além de afetar a estética e a fala. O implante evita essas complicações e devolve função e beleza ao sorriso.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Endodontia (Tratamento de Canal) -->
+            <div class="faq-categoria">
+                <h3>Endodontia (Tratamento de Canal)</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Tratamento de canal dói?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Essa é a dúvida mais comum — e a resposta é não. Com o uso de anestesia local e técnicas modernas, o tratamento de canal é seguro e indolor. A maioria dos pacientes se surpreende com a tranquilidade do procedimento.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quando é necessário fazer canal?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O canal é indicado quando a polpa do dente (parte interna) está inflamada ou infectada, geralmente por cáries profundas, fraturas ou traumas. Os sinais mais comuns são dor intensa, sensibilidade prolongada e inchaço na gengiva.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva o tratamento de canal?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Em muitos casos, o tratamento pode ser feito em uma única sessão, mas dependendo da complexidade, pode ser necessário mais de um atendimento. Tudo será avaliado pelo endodontista após análise clínica e radiográfica.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dente do Siso -->
+            <div class="faq-categoria">
+                <h3>Dente do Siso</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quando é necessário extrair o dente do siso?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A extração é indicada quando o siso está incluso (não nasceu totalmente), torto, pressionando outros dentes, ou causando dor, inflamação, cárie ou infecção. O dentista avalia com radiografia se há espaço suficiente ou risco de complicações.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        A extração do siso dói?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Não. O procedimento é feito com anestesia local, de forma segura e indolor. Após a cirurgia, pode haver inchaço ou desconforto leve nos primeiros dias, mas tudo é controlado com medicação e orientações específicas.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Preciso tirar todos os sisos de uma vez?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Depende do caso. Em alguns pacientes, é possível extrair dois ou até os quatro sisos na mesma sessão, especialmente quando há indicação cirúrgica. O dentista irá avaliar qual abordagem é mais adequada e segura para você.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aparelho Ortodôntico -->
+            <div class="faq-categoria">
+                <h3>Aparelho Ortodôntico</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual é a idade ideal para colocar aparelho?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Não existe uma idade única. O ideal é que a primeira avaliação ortodôntica ocorra por volta dos 7 anos, mas o aparelho pode ser colocado em crianças, adolescentes e adultos, dependendo da necessidade de correção.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo dura o tratamento com aparelho?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O tempo varia conforme o caso, mas em média, o tratamento dura de 18 a 36 meses. Após a avaliação, o ortodontista indica o tempo estimado com base na movimentação necessária.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quais os tipos de aparelho disponíveis?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Oferecemos desde o aparelho fixo tradicional (metálico) até opções mais discretas como aparelho estético (safira ou porcelana) e os modernos alinhadores transparentes. O profissional orienta qual é o ideal para seu caso e estilo de vida.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lentes e Facetas Dentárias -->
+            <div class="faq-categoria">
+                <h3>Lentes e Facetas Dentárias</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual a diferença entre lente de contato dental e faceta?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A lente de contato dental é uma lâmina ultrafina de porcelana, indicada para pequenas correções estéticas (como cor, formato ou pequenas falhas). Já a faceta é um pouco mais espessa e pode exigir desgaste maior do dente, sendo indicada para alterações mais significativas. Ambas melhoram a estética do sorriso com naturalidade e durabilidade.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual é a durabilidade das lentes e facetas?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Com boa higiene e acompanhamento profissional, tanto as lentes quanto as facetas podem durar de 10 a 15 anos ou mais. Evitar hábitos como roer unhas, abrir objetos com os dentes ou consumir alimentos muito duros ajuda a preservar os resultados por mais tempo.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qualquer pessoa pode fazer esse tipo de tratamento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        É necessário passar por uma avaliação para verificar se há saúde gengival, boa mordida e ausência de bruxismo intenso, por exemplo. Em muitos casos, é preciso realizar tratamentos prévios (como limpeza, restaurações ou alinhamento) antes da instalação das lentes ou facetas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clareamento Dental -->
+            <div class="faq-categoria">
+                <h3>Clareamento Dental</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que é clareamento dental?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        É um tratamento estético que utiliza agentes químicos para remover manchas e clarear a cor dos dentes, deixando seu sorriso mais brilhante e uniforme.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O clareamento dói?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Algumas pessoas podem sentir uma leve sensibilidade durante ou após o tratamento, mas ela costuma ser temporária e controlada com produtos específicos indicados pelo dentista.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo dura o resultado do clareamento?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Os resultados podem durar de 6 meses a 2 anos, dependendo dos cuidados com a alimentação e higiene. Evitar alimentos e bebidas pigmentadas, como café, vinho e refrigerantes, ajuda a manter o sorriso mais branco por mais tempo.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prótese Dentária -->
+            <div class="faq-categoria">
+                <h3>Prótese Dentária</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quais são os tipos de prótese dentária?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Existem dois tipos principais:<br><br>
+                        • Próteses fixas, como coroas, pontes e próteses sobre implantes, que são firmemente fixadas à boca.<br><br>
+                        • Próteses removíveis, como dentaduras ou próteses parciais, que podem ser retiradas pelo paciente.<br><br>
+                        O dentista avalia qual é a melhor opção para o seu caso, levando em conta conforto, estética e funcionalidade.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Prótese machuca ou incomoda?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Nos primeiros dias é comum um período de adaptação, mas a prótese não deve causar dor ou machucar. Caso isso ocorra, é importante retornar ao dentista para ajustes. As próteses bem adaptadas proporcionam conforto e boa mastigação.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo dura uma prótese dentária?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A durabilidade depende do tipo de prótese e dos cuidados do paciente.<br><br>
+                        • As próteses fixas (como coroas e próteses sobre implantes) podem durar 10 anos ou mais, com boa higiene e acompanhamento.<br><br>
+                        • Já as próteses removíveis (como dentaduras) devem ser avaliadas e geralmente trocadas a cada 5 anos, pois o uso prolongado pode favorecer o acúmulo de bactérias, alterações na mordida e reabsorção óssea, além de comprometer a estética e o conforto.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cirurgia Bucomaxilofacial -->
+            <div class="faq-categoria">
+                <h3>Cirurgia Bucomaxilofacial</h3>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O que é a especialidade Bucomaxilofacial?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A Cirurgia e Traumatologia Bucomaxilofacial é uma especialidade da odontologia responsável por diagnosticar e tratar problemas mais complexos que envolvem a boca, face, maxilares e articulação temporomandibular (ATM). O cirurgião bucomaxilofacial é o profissional habilitado para realizar desde extrações de sisos complexos até cirurgias ósseas, correções de deformidades e tratamento de traumas faciais.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quando devo procurar um bucomaxilofacial?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        • Extração de dentes do siso impactados ou complicados<br>
+                        • Cirurgias ósseas (como enxertos, remoção de lesões ou cistos)<br>
+                        • Problemas na ATM (estalos, dor ao abrir ou fechar a boca)<br>
+                        • Traumas faciais ou fraturas, provocados por quedas, acidentes ou pancadas<br>
+                        • Avaliação de assimetrias faciais, alterações ósseas ou deformidade<br><br>
+                        Aqui na clínica realizamos diversos desses procedimentos com segurança, conforto e acompanhamento especializado. Agende sua avaliação!
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <p style="margin-bottom: 20px; font-weight: 500;">Não encontrou sua dúvida? Nossa equipe está pronta para orientar você com cuidado e clareza.</p>
+            <a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas" class="btn btn-primary" target="_blank">Falar com a Amey Clinic</a>
+        </div>
+    </div>
+</section>
+
+<!-- BLOCO FINAL (ANTES DO RODAPÉ) -->
+<section style="padding: 0 0 80px; background: var(--off-white);">
+    <div class="container">
+        <div class="bloco-final">
+            <div class="bloco-final-image">
+                <img src="Eliane.png" alt="Paciente Amey Clinic">
+            </div>
+            <div class="bloco-final-content">
+                <h2>Cuidar do seu sorriso é cuidar de você.</h2>
+                <p>Aqui, você é ouvido.</p>
+                <p>Cada decisão é explicada.</p>
+                <p>Cada cuidado é pensado com respeito à sua história.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Fale Conosco</h4>
+                <p><i class="fas fa-phone"></i> (11) 2037-1867</p>
+                <p><i class="fab fa-whatsapp"></i> (11) 95640-2651</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Nosso Endereço</h4>
+                <p>R. Tenente Luís Fernando Lobo, 138<br>
+                São Miguel Paulista - São Paulo/SP<br>
+                08010-060<br>
+                <a href="#" style="color: var(--off-white); text-decoration: underline;">Ver no mapa</a></p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Horário</h4>
+                <p><strong>Segunda a Sexta</strong><br>09h às 19h</p>
+                <p><strong>Sábados</strong><br>09h às 16h</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Redes Sociais</h4>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+        
+        <div class="footer-logo">
+            <!-- LOGO NO RODAPÉ -->
+            <img src="logoameywhite.png" alt="Amey Clinic" style="height: 250px; width: auto;">
+            <p>"Cuidando do seu sorriso, cuidando de você."</p>
+        </div>
+        
+        <div class="footer-bottom">
+            Amey Clinic - CRO-CL: 034587<br>
+            RT: Dra. Letícia Marcelino Moreira - CRO-SP: 128996<br>
+            © 2026 Amey Clinic. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FIXO -->
+<a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- SCRIPTS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Menu hamburger
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
