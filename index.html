@@ -86,8 +86,9 @@
             padding: 0 20px;
         }
 
+        /* LOGO AUMENTADO 30% */
         .logo img {
-            height: 130px;
+            height: 170px; /* Aumentado de 130px para 170px */
             width: auto;
             display: block;
         }
@@ -205,6 +206,63 @@
             border-radius: 12px;
         }
 
+        /* ===== PROVA SOCIAL ===== */
+        .prova-social-card {
+            display: flex;
+            align-items: center;
+            background: #F5F2EC;
+            border: 1px solid #E0D9D0;
+            border-radius: 50px;
+            padding: 8px 16px 8px 12px;
+            margin-top: 20px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .prova-social-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .prova-social-icon {
+            background: #6B7D5A;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .prova-social-icon i {
+            color: white;
+            font-size: 16px;
+        }
+
+        .prova-social-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prova-social-estrelas {
+            color: #F2C94C;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .prova-social-nota {
+            font-weight: 700;
+            color:  #6B7D5A;
+            font-size: 0.9rem;
+        }
+
+        .prova-social-texto {
+            font-size: 0.8rem;
+            color: #6F6F6F;
+        }
+
         /* ===== CARDS HOME ===== */
         .home-cards {
             display: flex;
@@ -225,11 +283,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            height: 280px; /* Altura fixa para padronizar */
+            justify-content: center;
         }
 
         .home-card img {
-            width: 35px;
-            height: 50px;
+            width: 45px; /* Reduzido 10% */
+            height: 45px;
             margin-bottom: 15px;
             object-fit: contain;
             filter: brightness(0) saturate(100%) invert(37%) sepia(13%) saturate(540%) hue-rotate(52deg) brightness(92%) contrast(88%);
@@ -238,6 +298,8 @@
         .home-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            color: #6B7D5A;
+            font-weight: 700; /* Mais destaque */
         }
 
         .home-card p {
@@ -248,245 +310,100 @@
         }
 
         /* ===== QUEM SOMOS ===== */
-        /* ===== QUEM SOMOS ===== */
-#quem-somos {
-    background: #F5F2EC;
-    padding: 60px 0;
-}
+        #quem-somos {
+            background: #F5F2EC;
+            padding: 60px 0;
+        }
 
-.quem-somos-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 60px;
-}
+        .quem-somos-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
 
-.quem-somos-texto {
-    flex: 1.2;
-}
+        .quem-somos-texto {
+            flex: 1.2;
+        }
 
-.quem-somos-texto h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: #6B7D5A;
-    margin-bottom: 25px;
-}
+        .quem-somos-texto h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #6B7D5A;
+            margin-bottom: 25px;
+        }
 
-.quem-somos-texto p {
-    color: #6F6F6F;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
+        .quem-somos-texto p {
+            color: #6F6F6F;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
 
-.quem-somos-imagem {
-    flex: 1;
-}
+        .quem-somos-imagem {
+            flex: 1;
+        }
 
-.quem-somos-imagem img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    display: block;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+        .quem-somos-imagem img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
-/* NOSSOS PILARES */
-#quem-somos h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 500;
-    color: #6B7D5A;
-    margin: 0 0 40px 0;
-}
+        /* NOSSOS PILARES */
+        #quem-somos h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: #6B7D5A;
+            margin: 0 0 40px 0;
+        }
 
-.pilares-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
+        .pilares-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px; /* Reduzido */
+        }
 
-.pilar-card {
-    background: #EFEAE3;
-    padding: 35px 25px;
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid #E0D9D0;
-    transition: transform 0.3s ease;
-}
+        .pilar-card {
+            background: #EFEAE3;
+            padding: 25px 20px; /* Reduzido */
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #E0D9D0;
+            transition: transform 0.3s ease;
+        }
 
-.pilar-card:hover {
-    transform: translateY(-5px);
-}
+        .pilar-card:hover {
+            transform: translateY(-5px);
+        }
 
-.pilar-card img {
-    width: 32px;
-    height: 48px;
-    margin-bottom: 20px;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(37%) sepia(13%) saturate(540%) hue-rotate(52deg) brightness(92%) contrast(88%);
-}
+        .pilar-card img {
+            width: 36px; /* Reduzido */
+            height: 36px;
+            margin-bottom: 15px;
+            object-fit: contain;
+            filter: brightness(0) saturate(100%) invert(37%) sepia(13%) saturate(540%) hue-rotate(52deg) brightness(92%) contrast(88%);
+        }
 
-.pilar-card h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #6B7D5A;
-    margin-bottom: 15px;
-}
+        .pilar-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem; /* Reduzido */
+            font-weight: 600;
+            color: #6B7D5A;
+            margin-bottom: 10px;
+        }
 
-.pilar-card p {
-    font-size: 1rem;
-    color: #6F6F6F;
-    line-height: 1.6;
-    margin: 0;
-}
+        .pilar-card p {
+            font-size: 0.95rem; /* Reduzido */
+            color: #6F6F6F;
+            line-height: 1.5;
+            margin: 0;
+        }
 
-/* ===== RESPONSIVIDADE TABLET ===== */
-@media (max-width: 992px) {
-    .quem-somos-wrapper {
-        gap: 40px;
-    }
-    
-    .quem-somos-texto h2 {
-        font-size: 2.2rem;
-    }
-    
-    .quem-somos-texto p {
-        font-size: 1rem;
-    }
-    
-    .pilares-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .pilar-card {
-        padding: 30px 20px;
-    }
-    
-    .pilar-card h4 {
-        font-size: 1.2rem;
-    }
-}
-
-/* ===== RESPONSIVIDADE MOBILE ===== */
-@media (max-width: 768px) {
-    .quem-somos-wrapper {
-        flex-direction: column;
-        gap: 30px;
-        margin-bottom: 40px;
-    }
-    
-    .quem-somos-texto {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .quem-somos-texto h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .quem-somos-texto p {
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .quem-somos-imagem {
-        width: 100%;
-    }
-    
-    #quem-somos h3 {
-        font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    
-    .pilares-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    
-    .pilar-card {
-        padding: 25px 15px;
-    }
-    
-    .pilar-card img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 15px;
-    }
-    
-    .pilar-card h4 {
-        font-size: 1.1rem;
-        margin-bottom: 10px;
-    }
-    
-    .pilar-card p {
-        font-size: 0.9rem;
-    }
-}
-
-/* ===== MOBILE PEQUENO ===== */
-@media (max-width: 480px) {
-    #quem-somos {
-        padding: 40px 0;
-    }
-    
-    .quem-somos-texto h2 {
-        font-size: 1.8rem;
-    }
-    
-    .quem-somos-texto p {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-    }
-    
-    #quem-somos h3 {
-        font-size: 1.6rem;
-        margin-bottom: 25px;
-    }
-    
-    .pilares-grid {
-        gap: 12px;
-    }
-    
-    .pilar-card {
-        padding: 20px 12px;
-    }
-    
-    .pilar-card img {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 12px;
-    }
-    
-    .pilar-card h4 {
-        font-size: 1rem;
-        margin-bottom: 8px;
-    }
-    
-    .pilar-card p {
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-}
-
-/* ===== MOBILE EXTRA PEQUENO ===== */
-@media (max-width: 360px) {
-    .pilares-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .pilar-card {
-        padding: 25px 15px;
-    }
-}
-
-        /* ===== TRATAMENTOS ===== */
        
 
         /* ===== AVALIAÇÕES ===== */
@@ -500,7 +417,7 @@
 
         .avaliacoes-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Alterado para 2 colunas */
             gap: 25px;
             margin: 40px 0 50px;
         }
@@ -510,30 +427,40 @@
             padding: 30px 25px;
             border-radius: 16px;
             border: 1px solid #CFC7BC;
+            display: flex;
+            flex-direction: column;
+            max-width: 550px; /* Largura máxima */
+            margin: 0 auto;
+            width: 100%;
         }
 
         .estrelas {
-            color: #E6B800;
-            font-size: 1.3rem;
+            color: #F2C94C;
+            font-size: 1.2rem;
             margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
         .avaliacao-card p {
-            color: #6F6F6F;
-            font-size: 1rem;
+            color: #3F3F3F;
+            font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 20px;
-            font-style: italic;
+            font-style: normal;
+            white-space: normal;
         }
 
         .avaliacao-nome {
             color: #6B7D5A;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 4px;
         }
 
-        .avaliacao-google {
+        .avaliacao-verified {
             color: #999;
-            margin-left: 5px;
+            font-size: 0.8rem;
+            font-weight: 400;
         }
 
         .btn-avaliacoes {
@@ -549,80 +476,196 @@
             text-decoration: none;
             display: inline-block;
             font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-avaliacoes a:hover {
+            background: transparent;
+            color: #6B7D5A;
         }
 
         /* ===== FAQ ===== */
-        .faq-categoria {
-            margin-bottom: 40px;
-        }
+        /* ===== FAQ ===== */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        .faq-categoria h3 {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #CFC7BC;
-        }
+.faq-categoria {
+    margin-bottom: 20px; /* Aumentado para dar respiro entre categorias */
+    border: none; /* Remove a borda inferior */
+}
 
-        .faq-item {
-            background: #EFEAE3;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            border: 1px solid #E0D9D0;
-            overflow: hidden;
-        }
+.faq-categoria-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #6B7D5A;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid #E0D9D0; /* Mantém apenas a linha do título */
+    margin-bottom: 10px;
+}
 
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 25px;
-            cursor: pointer;
-            background: #EFEAE3;
-        }
+.faq-categoria-titulo:hover {
+    color: #4A5A3E;
+}
 
-        .faq-question span {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: #3F3F3F;
-        }
+.faq-categoria-titulo i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: #6B7D5A;
+}
 
-        .faq-question i {
+.faq-categoria-titulo.active i {
+    transform: rotate(180deg);
+}
+
+.faq-perguntas-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 0;
+}
+
+.faq-perguntas-container.show {
+    max-height: 1000px;
+    padding: 10px 0 5px 0;
+}
+
+/* ===== CAIXINHAS DAS PERGUNTAS ===== */
+.faq-item {
+    background: #EFEAE3; /* Fundo bege */
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #E0D9D0;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: #EFEAE3;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #E8DDD2; /* Levemente mais escuro no hover */
+}
+
+.faq-question span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3F3F3F;
+    flex: 1;
+}
+
+.faq-question i {
+    color: #6B7D5A;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    width: 20px;
+    text-align: center;
+}
+
+.faq-question i.rotate {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #F5F2EC; /* Fundo um pouco mais claro para diferenciar */
+    padding: 0 20px;
+    border-top: 0 solid transparent;
+}
+
+.faq-answer.show {
+    max-height: 200px;
+    padding: 15px 20px;
+    border-top: 1px solid #E0D9D0;
+}
+
+.faq-answer p {
+    color: #6F6F6F;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.btn-faq {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-faq a {
+    color: #F5F2EC;
+    background: #6B7D5A;
+    border: 1px solid #6B7D5A;
+    border-radius: 24px;
+    padding: 12px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-faq a:hover {
+    background: transparent;
+    color: #6B7D5A;
+}
+
+/* ===== RESPONSIVIDADE FAQ ===== */
+@media (max-width: 768px) {
+    .faq-categoria-titulo {
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
+    
+    .faq-question {
+        padding: 12px 15px;
+    }
+    
+    .faq-question span {
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer p {
+        font-size: 0.85rem;
+    }
+    
+    .faq-answer.show {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-categoria-titulo {
+        font-size: 1.1rem;
+    }
+    
+    .faq-question span {
+        font-size: 0.85rem;
+    }
+    
+    .btn-faq a {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
+
+        .btn-faq a:hover {
+            background: transparent;
             color: #6B7D5A;
-            font-size: 1.1rem;
-            transition: transform 0.3s;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            background: #EFEAE3;
-            padding: 0 25px;
-        }
-
-        .faq-answer p {
-            padding: 20px 0 25px;
-            margin: 0;
-            border-top: 1px solid #E0D9D0;
-            color: #6F6F6F;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .btn-faq {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .btn-faq a {
-            color: #F5F2EC;
-            background: #6B7D5A;
-            border: 1px solid #6B7D5A;
-            border-radius: 24px;
-            padding: 14px 36px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1.1rem;
         }
 
         /* ===== BLOCO FINAL ===== */
@@ -660,66 +703,111 @@
             font-size: 1.2rem;
             margin: 10px 0;
         }
-/* ===== AJUSTE MOBILE TRATAMENTOS ===== */
-@media (max-width: 768px) {
 
-    #tratamentos {
-        padding: 40px 0;
-    }
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: #6E6E6E;
+            color: #F5F2EC;
+            padding: 40px 0 20px; /* Reduzido */
+        }
 
-    .tratamentos-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 0.8fr;
+            gap: 30px; /* Reduzido */
+            margin-bottom: 20px; /* Reduzido */
+        }
 
-    .tratamento-card {
-        text-align: center;
-        padding: 15px;
-    }
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #dbd7cd;
+            font-weight: 600;
+        }
 
-    .tratamento-card img {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-    }
+        .footer-col p {
+            color: #dbd7cd;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
 
-    .tratamento-bloco,
-.tratamento-bloco.reverso {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding: 15px;
-}
+        .footer-col i {
+            color: #dbd7cd;
+            width: 18px;
+            font-size: 0.9rem;
+        }
 
-    .tratamento-imagem img {
-    height: auto;
-    max-height: 180px;
-}
+        .footer-col:nth-child(3){
+            margin-left: 40px;
+        }
 
-   .tratamento-conteudo p {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
+        .footer-col a {
+            color: #dbd7cd;
+            text-decoration: underline;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+        }
 
-}
+        .footer-col a:hover {
+            opacity: 0.8;
+        }
 
-@media (max-width:768px){
+        /* BLOCO CENTRAL DA MARCA */
+        .footer-brand {
+            text-align: center;
+            margin: 10px 0 15px; /* Reduzido */
+        }
 
-#tratamentos h2{
-margin-bottom:10px;
-}
+        .footer-logo {
+            margin-bottom: 4px;
+        }
 
-#tratamentos p{
-margin-bottom:20px;
-}
+        .footer-logo img {
+            height: 150px; /* Reduzido para aproximar */
+            width: auto;
+            display: inline-block;
+        }
 
-.tratamento-bloco{
-margin-top:0;
-}
+        .footer-tagline {
+            font-style: italic;
+            color: #dbd7cd;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
 
-}
-        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #F5F2EC;
+            font-size: 1.2rem;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(245,242,236,0.2);
+            padding-top: 15px;
+            text-align: center;
+            color: #dbd7cd;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 3px;
+        }
 
         /* ===== WHATSAPP ===== */
         .whatsapp-float {
@@ -738,9 +826,16 @@ margin-top:0;
             border: 1px solid #F5F2EC;
             z-index: 999;
             color: #F5F2EC;
+            transition: all 0.3s ease;
         }
 
-        /* ===== RESPONSIVIDADE MOBILE ===== */
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #F5F2EC;
+            color: #6B7D5A;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
         @media (max-width: 992px) {
             h1 { font-size: 2.4rem; }
             h2 { font-size: 2rem; }
@@ -752,6 +847,10 @@ margin-top:0;
             
             .hero-image img {
                 max-height: 500px;
+            }
+            
+            .pilares-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .avaliacoes-grid {
@@ -770,7 +869,7 @@ margin-top:0;
             }
 
             .logo img {
-                height: 70px;
+                height: 110px; /* Ajustado proporcionalmente */
             }
 
             .hamburger {
@@ -838,6 +937,10 @@ margin-top:0;
                 font-size: 1rem;
             }
 
+            .prova-social-card {
+                margin: 20px auto 0;
+            }
+
             .hero-image {
                 min-width: 100%;
                 width: 100%;
@@ -853,7 +956,14 @@ margin-top:0;
             }
 
             .home-card {
+                height: auto;
+                min-height: 250px;
                 padding: 20px 15px;
+            }
+
+            .home-card img {
+                width: 40px;
+                height: 40px;
             }
 
             .home-card h3 {
@@ -873,10 +983,22 @@ margin-top:0;
 
             .quem-somos-texto h2 {
                 font-size: 2rem;
+                text-align: center;
             }
 
             .quem-somos-texto p {
                 font-size: 1rem;
+                text-align: center;
+            }
+
+            .quem-somos-imagem {
+                width: 100%;
+            }
+
+            #quem-somos h3 {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 30px;
             }
 
             .pilares-grid {
@@ -885,60 +1007,77 @@ margin-top:0;
             }
 
             .pilar-card {
-                padding: 25px 15px;
+                padding: 20px 12px;
+            }
+
+            .pilar-card img {
+                width: 32px;
+                height: 32px;
+                margin-bottom: 12px;
             }
 
             .pilar-card h4 {
                 font-size: 1.1rem;
+                margin-bottom: 8px;
             }
 
             .pilar-card p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .tratamentos-cards {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 10px;
+                margin-bottom: 30px;
             }
 
             .tratamento-card {
+                min-width: 100%;
                 max-width: 100%;
-                padding: 20px 12px;
+                padding: 15px 10px;
+            }
+
+            .tratamento-card-img {
+                width: 30px;
+                height: 30px;
+                margin-bottom: 8px;
             }
 
             .tratamento-card h3 {
-                font-size: 1rem;
+                font-size: 0.9rem;
+                margin-bottom: 5px;
             }
 
             .tratamento-card p {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
 
             .tratamento-bloco,
             .tratamento-bloco.reverso {
                 flex-direction: column !important;
-                gap: 20px;
-                padding: 25px;
+                gap: 8px;
+                padding: 15px;
+                margin-bottom: 15px;
             }
 
             .tratamento-conteudo {
-                text-align: center;
                 width: 100%;
+                text-align: left;
             }
 
             .tratamento-conteudo h3 {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
+                margin-bottom: 8px;
             }
 
             .tratamento-conteudo p {
-                font-size: 1rem;
-                justify-content: center;
+                font-size: 0.85rem;
+                margin-bottom: 5px;
             }
 
             .tratamento-imagem img {
-                height: auto;
-                max-height: 250px;
+                max-height: 160px;
             }
 
             .avaliacoes-header {
@@ -958,18 +1097,11 @@ margin-top:0;
 
             .avaliacao-card {
                 padding: 25px 20px;
+                max-width: 100%;
             }
 
-            .faq-categoria h3 {
-                font-size: 1.4rem;
-            }
-
-            .faq-question {
-                padding: 15px 20px;
-            }
-
-            .faq-question span {
-                font-size: 1rem;
+            .faq-categoria-titulo {
+                font-size: 1.2rem;
             }
 
             .bloco-final-grid {
@@ -989,14 +1121,22 @@ margin-top:0;
                 font-size: 1.6rem;
             }
 
-            .bloco-final-conteudo p {
-                font-size: 1.1rem;
-            }
-
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
                 text-align: left;
+            }
+
+            .footer-col:nth-child(3){
+                margin-left: 0;
+            }
+
+            .footer-col p {
+                justify-content: flex-start;
+            }
+
+            .footer-logo img {
+                height: 130px;
             }
         }
 
@@ -1010,7 +1150,7 @@ margin-top:0;
             }
 
             .logo img {
-                height: 60px;
+                height: 115px;
             }
 
             .hamburger {
@@ -1034,16 +1174,11 @@ margin-top:0;
             }
 
             .hero-image img {
-                max-height: 300px;
+                max-height: 280px;
             }
 
             .home-card {
-                padding: 18px 12px;
-            }
-
-            .home-card img {
-                width: 40px;
-                height: 40px;
+                padding: 15px 12px;
             }
 
             .home-card h3 {
@@ -1051,32 +1186,50 @@ margin-top:0;
             }
 
             .home-card p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .pilares-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
 
             .tratamentos-cards {
-                gap: 10px;
+                gap: 8px;
             }
 
             .tratamento-card {
-                padding: 15px 10px;
+                padding: 12px 6px;
             }
 
-            .tratamento-card img {
-                width: 35px;
-                height: 35px;
+            .tratamento-card-img {
+                width: 28px;
+                height: 28px;
+                margin-bottom: 6px;
             }
 
             .tratamento-card h3 {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
 
             .tratamento-card p {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
+            }
+
+            .avaliacao-card {
+                padding: 20px 15px;
+            }
+
+            .estrelas {
+                font-size: 1rem;
+            }
+
+            .avaliacao-card p {
+                font-size: 0.85rem;
+            }
+
+            .footer-logo img {
+                height: 110px;
             }
 
             .btn-avaliacoes a,
@@ -1084,16 +1237,6 @@ margin-top:0;
             .hero-text a {
                 padding: 12px 28px;
                 font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .logo img {
-                height: 130px;
-            }
-
-            .hero-image img {
-                max-height: 250px;
             }
         }
     </style>
@@ -1127,32 +1270,37 @@ margin-top:0;
         <div>
             <div class="hero-text">
                 <h1>Cuidar do seu sorriso<br>é cuidar de você.</h1>
-                <p>Desde 2011, a Amey Clinic constrói um cuidado odontológico baseado em consciência, técnica e atenção verdadeira às pessoas.</p>
+                <p>Desde 2011, a Amey Clinic cuida de cada paciente com atenção, técnica e decisões explicadas com clareza.</p>
                 <a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank">Agendar avaliação com orientação</a>
+                
+                <!-- PROVA SOCIAL -->
+                <div class="prova-social-card">
+                    <div class="prova-social-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="prova-social-content">
+                        <div class="prova-social-estrelas">★★★★★</div>
+                        <div><span class="prova-social-nota">4.9 no Google</span></div>
+                        <div class="prova-social-texto">Avaliações reais de pacientes</div>
+                    </div>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="entrada.jpeg" alt="Recepção Amey Clinic">
             </div>
         </div>
         
+        <!-- CARDS INSTITUCIONAIS -->
         <div class="home-cards">
             <div class="home-card">
                 <img src="relogio.png" alt="relogio">
-<h3>Desde 2011</h3>
-<p>
-Construindo relações<br>
-de cuidado, confiança<br>
-e responsabilidade.
-</p>
+                <h3>Desde 2011</h3>
+                <p>Construindo relações de cuidado, confiança e responsabilidade.</p>
             </div>
             <div class="home-card">
                 <img src="orientar.png" alt="orientar">
-<h3>Cuidar também<br>é orientar</h3>
-<p>
-Cada decisão é explicada<br>
-com clareza, para que<br>
-você escolha com segurança.
-</p>
+                <h3>Cuidar também é orientar</h3>
+                <p>Cada decisão é explicada com clareza, para que você escolha com segurança.</p>
             </div>
         </div>
     </div>
@@ -1169,7 +1317,8 @@ você escolha com segurança.
                 <p>Nosso papel é orientar com clareza, para que cada paciente se sinta seguro, respeitado e bem informado.</p>
             </div>
             <div class="quem-somos-imagem">
-                <img src="entrada.jpeg" alt="Equipe Amey Clinic">
+                <!-- NOVA IMAGEM (a ser substituída pela cliente) -->
+                <img src="clinica-2.jpeg" alt="Clínica Amey Clinic">
             </div>
         </div>
 
@@ -1200,646 +1349,661 @@ você escolha com segurança.
 </section>
 
 <!-- TRATAMENTOS -->
-<section id="tratamentos" style="padding: 60px 0; background: #F5F2EC;">
-    <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+<!-- TRATAMENTOS -->
+<section id="tratamentos" style="padding: 60px 0; background: #F5F2EC; width: 100%; overflow: hidden;">
+    <div class="container" style="max-width: 1280px; margin: 0 auto; padding: 0 20px; width: 100%;">
         
+        <!-- TÍTULO -->
         <h2 style="font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 600; color: #6B7D5A; margin-bottom: 16px; text-align: left;">Nossos Tratamentos</h2>
+        
+        <!-- DESCRIÇÃO -->
         <p style="font-size: 1.1rem; color: #6F6F6F; margin-bottom: 40px; max-width: 800px; text-align: center; margin-left: auto; margin-right: auto;">
             Conheça nossas áreas de atuação. Cada cuidado começa com orientação e planejamento.
         </p>
         
-        <!-- CARDS DOS TRATAMENTOS -->
-        <div class="tratamentos-cards-wrapper" style="margin-bottom: 60px;">
-            <div class="tratamentos-cards">
-                
-                <!-- Card 1: Reabilitação Oral -->
-                <div class="tratamento-card">
-                    <img src="reabilitação.png" alt="Reabilitação Oral" class="tratamento-card-img">
-                    <h3>Reabilitação Oral</h3>
-                    <p>Planejamento completo para devolver função, conforto e estética.</p>
-                </div>
-                
-                <!-- Card 2: Implantes Dentários -->
-                <div class="tratamento-card">
-                    <img src="implantes.png" alt="Implantes Dentários" class="tratamento-card-img">
-                    <h3>Implantes Dentários</h3>
-                    <p>Substituição de dentes perdidos com segurança e naturalidade.</p>
-                </div>
-                
-                <!-- Card 3: Prótese Dentária -->
-                <div class="tratamento-card">
-                    <img src="protese.png" alt="Prótese Dentária" class="tratamento-card-img">
-                    <h3>Prótese Dentária</h3>
-                    <p>Soluções fixas ou removíveis para conforto e harmonia do sorriso.</p>
-                </div>
-                
-                <!-- Card 4: Ortodontia -->
-                <div class="tratamento-card">
-                    <img src="aparelho-ortodontico.png" alt="Ortodontia" class="tratamento-card-img">
-                    <h3>Ortodontia</h3>
-                    <p>Alinhamento e mordida com técnicas modernas e acompanhamento contínuo.</p>
-                </div>
-                
-                <!-- Card 5: Clínica Geral -->
-                <div class="tratamento-card">
-                    <img src="clinica.png" alt="Clínica Geral" class="tratamento-card-img">
-                    <h3>Clínica Geral</h3>
-                    <p>Prevenção, diagnóstico e cuidado contínuo da saúde bucal.</p>
-                </div>
-                
-                <!-- Card 6: Cirurgia Bucomaxilofacial -->
-                <div class="tratamento-card">
-                    <img src="cadeira-de-dentista.png" alt="Cirurgia Bucomaxilofacial" class="tratamento-card-img">
-                    <h3>Cirurgia Bucomaxilofacial</h3>
-                    <p>Procedimentos cirúrgicos com indicação precisa e segurança.</p>
-                </div>
-                
+        <!-- CARDS DOS TRATAMENTOS - GRID -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 40px;">
+            
+            <!-- Card 1: Reabilitação Oral -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="reabilitação.png" alt="Reabilitação Oral" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Reabilitação Oral</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Planejamento completo para devolver função, conforto e estética.</p>
             </div>
+            
+            <!-- Card 2: Implantes Dentários -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="implantes.png" alt="Implantes Dentários" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Implantes Dentários</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Substituição de dentes perdidos com segurança e naturalidade.</p>
+            </div>
+            
+            <!-- Card 3: Prótese Dentária -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="protese.png" alt="Prótese Dentária" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Prótese Dentária</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Soluções fixas ou removíveis para conforto e harmonia do sorriso.</p>
+            </div>
+            
+            <!-- Card 4: Ortodontia -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="aparelho-ortodontico.png" alt="Ortodontia" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Ortodontia</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Alinhamento e mordida com técnicas modernas e acompanhamento contínuo.</p>
+            </div>
+            
+            <!-- Card 5: Clínica Geral -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="clinica.png" alt="Clínica Geral" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Clínica Geral</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Prevenção, diagnóstico e cuidado contínuo da saúde bucal.</p>
+            </div>
+            
+            <!-- Card 6: Cirurgia Bucomaxilofacial -->
+            <div style="background: #EFEAE3; padding: 25px 15px; border-radius: 16px; text-align: center; border: 1px solid #CFC7BC; display: flex; flex-direction: column; align-items: center; flex: 1 1 180px; min-width: 160px; max-width: 200px;">
+                <img src="cadeira-de-dentista.png" alt="Cirurgia Bucomaxilofacial" style="width: 33px; height: 33px; margin-bottom: 15px; object-fit: contain; filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #6B7D5A; margin-bottom: 10px;">Cirurgia Bucomaxilofacial</h3>
+                <p style="color: #6F6F6F; font-size: 0.85rem; line-height: 1.5; margin: 0;">Procedimentos cirúrgicos com indicação precisa e segurança.</p>
+            </div>
+            
         </div>
         
         <!-- TRATAMENTO 1: Reabilitação Oral -->
-        <div class="tratamento-bloco">
-            <div class="tratamento-conteudo">
-                <h3>Reabilitação Oral</h3>
-                <p><i class="fas fa-check-circle"></i> Planejamento completo e individualizado</p>
-                <p><i class="fas fa-check-circle"></i> Devolve função mastigatória e conforto</p>
-                <p><i class="fas fa-check-circle"></i> Estética natural e harmoniosa</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Reabilitação Oral</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Planejamento completo e individualizado</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Devolve função mastigatória e conforto</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Estética natural e harmoniosa</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="01 - Reabilitação Oral.png" alt="01 - Reabilitação Oral">
+            <div style="flex: 1 1 400px;">
+                <img src="01 - Reabilitação Oral.png" alt="Reabilitação Oral" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
         <!-- TRATAMENTO 2: Implantes Dentários -->
-        <div class="tratamento-bloco reverso">
-            <div class="tratamento-conteudo">
-                <h3>Implantes Dentários</h3>
-                <p><i class="fas fa-check-circle"></i> Substituição de dentes perdidos com segurança</p>
-                <p><i class="fas fa-check-circle"></i> Aspecto natural e durabilidade</p>
-                <p><i class="fas fa-check-circle"></i> Procedimento seguro e indolor</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px; flex-direction: row-reverse;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Implantes Dentários</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Substituição de dentes perdidos com segurança</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Aspecto natural e durabilidade</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Procedimento seguro e indolor</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="02 - Implantes.png" alt="02 - Implantes">
+            <div style="flex: 1 1 400px;">
+                <img src="02 - Implantes.png" alt="Implantes Dentários" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
         <!-- TRATAMENTO 3: Prótese Dentária -->
-        <div class="tratamento-bloco">
-            <div class="tratamento-conteudo">
-                <h3>Prótese Dentária</h3>
-                <p><i class="fas fa-check-circle"></i> Soluções fixas ou removíveis</p>
-                <p><i class="fas fa-check-circle"></i> Conforto e harmonia do sorriso</p>
-                <p><i class="fas fa-check-circle"></i> Estética e função restauradas</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Prótese Dentária</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Soluções fixas ou removíveis</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Conforto e harmonia do sorriso</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Estética e função restauradas</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="03 - Protese dentária.png" alt="03 - Protese dentária">
+            <div style="flex: 1 1 400px;">
+                <img src="03 - Protese dentária.png" alt="Prótese Dentária" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
         <!-- TRATAMENTO 4: Ortodontia -->
-        <div class="tratamento-bloco reverso">
-            <div class="tratamento-conteudo">
-                <h3>Ortodontia</h3>
-                <p><i class="fas fa-check-circle"></i> Alinhamento dental com técnicas modernas</p>
-                <p><i class="fas fa-check-circle"></i> Correção da mordida</p>
-                <p><i class="fas fa-check-circle"></i> Acompanhamento contínuo personalizado</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px; flex-direction: row-reverse;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Ortodontia</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Alinhamento dental com técnicas modernas</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Correção da mordida</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Acompanhamento contínuo personalizado</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="04 - Ortodontia.png" alt="04 - Ortodontia">
+            <div style="flex: 1 1 400px;">
+                <img src="04 - Ortodontia.png" alt="Ortodontia" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
         <!-- TRATAMENTO 5: Clínica Geral -->
-        <div class="tratamento-bloco">
-            <div class="tratamento-conteudo">
-                <h3>Clínica Geral</h3>
-                <p><i class="fas fa-check-circle"></i> Prevenção e diagnóstico precoce</p>
-                <p><i class="fas fa-check-circle"></i> Cuidado contínuo da saúde bucal</p>
-                <p><i class="fas fa-check-circle"></i> Acompanhamento periódico</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Clínica Geral</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Prevenção e diagnóstico precoce</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Cuidado contínuo da saúde bucal</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Acompanhamento periódico</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="Clinico Geral.png" alt="Clinico Geral">
+            <div style="flex: 1 1 400px;">
+                <img src="Clinico Geral.png" alt="Clínica Geral" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
         <!-- TRATAMENTO 6: Cirurgia Bucomaxilofacial -->
-        <div class="tratamento-bloco reverso">
-            <div class="tratamento-conteudo">
-                <h3>Cirurgia Bucomaxilofacial</h3>
-                <p><i class="fas fa-check-circle"></i> Procedimentos cirúrgicos especializados</p>
-                <p><i class="fas fa-check-circle"></i> Indicação precisa e segura</p>
-                <p><i class="fas fa-check-circle"></i> Equipe especializada</p>
+        <div style="display: flex; align-items: center; gap: 40px; margin-bottom: 50px; background: #F5F2EC; padding: 30px; border-radius: 16px; flex-direction: row-reverse;">
+            <div style="flex: 1 1 400px;">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 600; color: #6B7D5A; margin-bottom: 15px;">Cirurgia Bucomaxilofacial</h3>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Procedimentos cirúrgicos especializados</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Indicação precisa e segura</p>
+                <p style="font-weight: 400; color: #6F6F6F; font-size: 1.1rem; margin-bottom: 0; line-height: 1.5; display: flex; align-items: center;"><i class="fas fa-check-circle" style="color: #6B7D5A; margin-right: 10px; font-size: 1.2rem;"></i> Equipe especializada</p>
             </div>
-            <div class="tratamento-imagem">
-                <img src="bucomaximo.jpg" alt="bucomaximo">
+            <div style="flex: 1 1 400px;">
+                <img src="bucomaximo.jpg" alt="Cirurgia Bucomaxilofacial" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; display: block;">
             </div>
         </div>
         
     </div>
 </section>
 
-<!-- CSS ESPECÍFICO PARA TRATAMENTOS -->
+<!-- CSS DE SUPORTE PARA MOBILE -->
 <style>
-/* ===== TRATAMENTOS - VERSÃO LIMPA ===== */
-/* CARDS DOS TRATAMENTOS */
-.tratamentos-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.tratamento-card {
-    background: #EFEAE3;
-    padding: 25px 15px;
-    border-radius: 16px;
-    text-align: center;
-    border: 1px solid #CFC7BC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1 1 180px;
-    min-width: 160px;
-    max-width: 200px;
-}
-
-.tratamento-card-img {
-    width: 33px !important;
-    height: 33px !important;
-    margin-bottom: 15px !important;
-    object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(1012%) hue-rotate(48deg) brightness(94%) contrast(88%);
-}
-
-.tratamento-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #6B7D5A;
-    margin-bottom: 10px;
-}
-
-.tratamento-card p {
-    color: #6F6F6F;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* BLOCOS DE TRATAMENTO - DESKTOP */
-.tratamento-bloco {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 50px;
-    background: #F5F2EC;
-    padding: 30px;
-    border-radius: 16px;
-}
-
-.tratamento-bloco.reverso {
-    flex-direction: row-reverse;
-}
-
-.tratamento-conteudo {
-    flex: 1 1 400px;
-}
-
-.tratamento-conteudo h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #6B7D5A;
-    margin-bottom: 20px;
-}
-
-.tratamento-conteudo p {
-    font-weight: 400;
-    color: #6F6F6F;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    line-height: 1.5;
-    display: flex;
-    align-items: center;
-}
-
-.tratamento-conteudo i {
-    color: #6B7D5A;
-    margin-right: 10px;
-    font-size: 1.2rem;
-}
-
-.tratamento-imagem {
-    flex: 1 1 400px;
-}
-
-.tratamento-imagem img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
-}
-
-/* RESPONSIVIDADE - TABLET */
-@media (max-width: 992px) {
-    .tratamento-card {
-        min-width: 140px;
+    @media (max-width: 768px) {
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 10px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div {
+            min-width: 100% !important;
+            max-width: 100% !important;
+            padding: 15px 10px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div img {
+            width: 30px !important;
+            height: 30px !important;
+            margin-bottom: 8px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div h3 {
+            font-size: 0.9rem !important;
+            margin-bottom: 5px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div p {
+            font-size: 0.7rem !important;
+            line-height: 1.2 !important;
+        }
+        
+        /* BLOCOS DE TRATAMENTO NO MOBILE */
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] {
+            flex-direction: column !important;
+            gap: 10px !important;
+            padding: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div {
+            width: 100% !important;
+            flex: none !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div h3 {
+            font-size: 1.3rem !important;
+            margin-bottom: 8px !important;
+            text-align: left !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div p {
+            font-size: 0.85rem !important;
+            margin-bottom: 6px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div img {
+            max-height: 160px !important;
+            width: 100% !important;
+            object-fit: cover !important;
+        }
     }
     
-    .tratamento-conteudo h3 {
-        font-size: 1.8rem;
+    @media (max-width: 480px) {
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] {
+            gap: 8px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div {
+            padding: 12px 8px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div img {
+            width: 26px !important;
+            height: 26px !important;
+            margin-bottom: 6px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div h3 {
+            font-size: 0.8rem !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; flex-wrap: wrap;"] > div p {
+            font-size: 0.65rem !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] {
+            padding: 15px !important;
+            gap: 8px !important;
+            margin-bottom: 15px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div h3 {
+            font-size: 1.2rem !important;
+            margin-bottom: 6px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div p {
+            font-size: 0.8rem !important;
+            margin-bottom: 4px !important;
+        }
+        
+        #tratamentos > div > div[style*="display: flex; align-items: center; gap: 40px;"] > div img {
+            max-height: 140px !important;
+        }
     }
-    
-    .tratamento-conteudo p {
-        font-size: 1rem;
-    }
-}
-
-/* ===== RESPONSIVIDADE MOBILE ===== */
-@media (max-width: 768px) {
-    
-    /* CARDS EM GRID 2 COLUNAS */
-    .tratamentos-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-    
-    .tratamento-card {
-        min-width: 100%;
-        max-width: 100%;
-        padding: 15px 10px;
-    }
-    
-    .tratamento-card-img {
-        width: 35px !important;
-        height: 35px !important;
-        margin-bottom: 8px !important;
-    }
-    
-    .tratamento-card h3 {
-        font-size: 0.9rem;
-        margin-bottom: 5px;
-    }
-    
-    .tratamento-card p {
-        font-size: 0.7rem;
-        line-height: 1.2;
-    }
-    
-    /* BLOCOS DE TRATAMENTO - MOBILE COMPACTADO */
-    .tratamento-bloco,
-    .tratamento-bloco.reverso {
-        flex-direction: column !important;
-        gap: 8px !important;
-        padding: 15px !important;
-        margin-bottom: 15px !important;
-        background: #F5F2EC;
-        border-radius: 12px;
-    }
-    
-    .tratamento-conteudo {
-        width: 100%;
-        flex: none;
-        text-align: left;
-    }
-    
-    .tratamento-conteudo h3 {
-        font-size: 1.3rem !important;
-        margin-bottom: 6px !important;
-        text-align: left;
-    }
-    
-    .tratamento-conteudo p {
-        font-size: 0.85rem !important;
-        margin-bottom: 4px !important;
-        justify-content: flex-start;
-    }
-    
-    .tratamento-conteudo i {
-        font-size: 0.9rem;
-        margin-right: 6px;
-    }
-    
-    .tratamento-imagem {
-        width: 100%;
-        flex: none;
-        margin-top: 0;
-    }
-    
-    .tratamento-imagem img {
-        width: 100%;
-        max-height: 160px;
-        object-fit: cover;
-        border-radius: 10px;
-        display: block;
-    }
-}
-
-/* MOBILE PEQUENO */
-@media (max-width: 480px) {
-    
-    .tratamentos-cards {
-        gap: 8px;
-    }
-    
-    .tratamento-card {
-        padding: 12px 8px;
-    }
-    
-    .tratamento-card-img {
-        width: 30px !important;
-        height: 30px !important;
-        margin-bottom: 6px !important;
-    }
-    
-    .tratamento-card h3 {
-        font-size: 0.8rem;
-    }
-    
-    .tratamento-card p {
-        font-size: 0.65rem;
-    }
-    
-    .tratamento-bloco,
-    .tratamento-bloco.reverso {
-        gap: 6px !important;
-        padding: 12px !important;
-        margin-bottom: 12px !important;
-    }
-    
-    .tratamento-conteudo h3 {
-        font-size: 1.2rem !important;
-        margin-bottom: 4px !important;
-    }
-    
-    .tratamento-conteudo p {
-        font-size: 0.8rem !important;
-        margin-bottom: 3px !important;
-    }
-    
-    .tratamento-imagem img {
-        max-height: 140px;
-    }
-}
 </style>
 
 <!-- AVALIAÇÕES -->
-<section id="avaliacoes">
-    <div class="container">
-        <div class="avaliacoes-header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" style="width: 40px; height: 40px;">
-            <h2>O que dizem nossos pacientes</h2>
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes" style="padding: 50px 0; background: #EFEAE3; width: 100%; overflow: hidden;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;">
+        
+        <!-- CABEÇALHO -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 10px;">
+            <div style="background: #6B7D5A; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;">
+                <i class="fab fa-google" style="color: white; font-size: 22px;"></i>
+            </div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #6B7D5A; margin: 0; text-align: center;">O que dizem nossos pacientes</h2>
         </div>
         
-        <p style="font-size: 1.1rem; color: #6F6F6F; margin-bottom: 50px; text-align: center;">Avaliações reais de pacientes que confiaram no cuidado da Amey Clinic.</p>
+        <!-- DESCRIÇÃO -->
+        <p style="font-size: 1.1rem; color: #6F6F6F; margin-bottom: 40px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">Avaliações reais de pacientes que confiaram no cuidado da Amey Clinic.</p>
         
-        <div class="avaliacoes-grid">
-            <div class="avaliacao-card">
-                <div class="estrelas">★★★★★</div>
-                <p>"Clínica maravilhosa. Profissionais qualificados. Preço justo. Super indico."</p>
-                <div><span class="avaliacao-nome">Lorena C.</span> <span class="avaliacao-google">· Google</span></div>
+        <!-- GRID DE AVALIAÇÕES -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin: 40px 0 50px;">
+            
+            <!-- Raphael Silva -->
+            <div style="background: #F5F2EC; padding: 30px 25px; border-radius: 16px; border: 1px solid #CFC7BC; display: flex; flex-direction: column; max-width: 550px; margin: 0 auto; width: 100%; transition: all 0.3s ease;">
+                <div style="color: #F2C94C; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <p style="color: #6F6F6F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; font-style: normal;">“O tratamento foi de altíssima qualidade, desde o primeiro atendimento até a finalização do procedimento. O cuidado com cada detalhe me deixou muito confiante e satisfeito. Recomendo de olhos fechados.”</p>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 5px;">
+                    <span style="color: #82966f; font-weight: 700; font-size: 1rem;">Raphael Silva</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+                    <!-- ÍCONE IGUAL AO DA HOME - BOLINHA VERDE COM G BRANCO -->
+                    <div style="background: #82966f; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google" style="color: white; font-size: 12px;"></i>
+                    </div>
+                    <span style="color: #999; font-size: 0.8rem; font-weight: 400;">Avaliação no Google</span>
+                </div>
             </div>
-            <div class="avaliacao-card">
-                <div class="estrelas">★★★★★</div>
-                <p>"Tratamento de altíssima qualidade. Recomendo."</p>
-                <div><span class="avaliacao-nome">Rafael S.</span> <span class="avaliacao-google">· Google</span></div>
+            
+            <!-- Claudilei Soares -->
+            <div style="background: #F5F2EC; padding: 30px 25px; border-radius: 16px; border: 1px solid #CFC7BC; display: flex; flex-direction: column; max-width: 550px; margin: 0 auto; width: 100%; transition: all 0.3s ease;">
+                <div style="color: #F2C94C; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <p style="color: #6F6F6F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; font-style: normal;">“Atendimento maravilhoso, desde as meninas da recepção até a equipe odontológica. Para quem procura um atendimento humanizado, com atenção e qualidade, a Amey Clinic é a escolha certa. Estou fazendo implante com eles e estou muito feliz com o atendimento. Recomendo muito.”</p>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 5px;">
+                    <span style="color: #82966f; font-weight: 700; font-size: 1rem;">Claudilei Soares</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+                    <div style="background: #82966f; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google" style="color: white; font-size: 12px;"></i>
+                    </div>
+                    <span style="color: #999; font-size: 0.8rem; font-weight: 400;">Avaliação no Google</span>
+                </div>
             </div>
-            <div class="avaliacao-card">
-                <div class="estrelas">★★★★★</div>
-                <p>"Melhor clínica que já fiz tratamento! Nota 1000!"</p>
-                <div><span class="avaliacao-nome">Viviane R.</span> <span class="avaliacao-google">· Google</span></div>
+            
+            <!-- Edson Ferreira -->
+            <div style="background: #F5F2EC; padding: 30px 25px; border-radius: 16px; border: 1px solid #CFC7BC; display: flex; flex-direction: column; max-width: 550px; margin: 0 auto; width: 100%; transition: all 0.3s ease;">
+                <div style="color: #F2C94C; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <p style="color: #6F6F6F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; font-style: normal;">“Excelente atendimento, local extremamente limpo e organizado. A recepção faz um trabalho de alta qualidade e os dentistas são realmente comprometidos com o bem-estar do paciente. Todo o meu respeito e admiração pela equipe.”</p>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 5px;">
+                    <span style="color: #82966f; font-weight: 700; font-size: 1rem;">Edson Ferreira</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+                    <div style="background: #82966f; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google" style="color: white; font-size: 12px;"></i>
+                    </div>
+                    <span style="color: #999; font-size: 0.8rem; font-weight: 400;">Avaliação no Google</span>
+                </div>
             </div>
-            <div class="avaliacao-card">
-                <div class="estrelas">★★★★★</div>
-                <p>"Atendimento excelente, equipe profissional e acolhedora."</p>
-                <div><span class="avaliacao-nome">Orlando S.</span> <span class="avaliacao-google">· Google</span></div>
+            
+            <!-- Viviane Ribeiro -->
+            <div style="background: #F5F2EC; padding: 30px 25px; border-radius: 16px; border: 1px solid #CFC7BC; display: flex; flex-direction: column; max-width: 550px; margin: 0 auto; width: 100%; transition: all 0.3s ease;">
+                <div style="color: #F2C94C; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <p style="color: #6F6F6F; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; font-style: normal;">“Melhor clínica em que já fiz tratamento na vida. Sempre tive problemas em outros lugares, mas aqui encontrei profissionais exemplares que transmitem muita confiança. Fiz desde uma abertura até implante e só tenho a agradecer.”</p>
+                <div style="display: flex; align-items: center; gap: 6px; margin-top: 5px;">
+                    <span style="color: #6B7D5A; font-weight: 700; font-size: 1rem;">Viviane Ribeiro</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 8px;">
+                    <div style="background: #82966f; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fab fa-google" style="color: white; font-size: 12px;"></i>
+                    </div>
+                    <span style="color: #999; font-size: 0.8rem; font-weight: 400;">Avaliação no Google</span>
+                </div>
             </div>
+            
         </div>
         
-        <div class="btn-avaliacoes">
-            <a href="#">Ver mais avaliações</a>
+        <!-- BOTÃO -->
+        <div style="text-align: center;">
+            <a href="https://www.google.com/search?q=ameiy+clinic&oq=ameiy+clinic&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgcIARAAGIAEMgYIAhBFGDsyBggDECMYJzIGCAQQIxgnMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMzI3OWowajeoAgiwAgHxBQ24RGYclySn&sourceid=chrome&ie=UTF-8#" style="font-weight: 500; color: #F5F2EC; background: #6B7D5A; border: 1px solid #6B7D5A; border-radius: 24px; padding: 14px 36px; text-decoration: none; display: inline-block; font-size: 1.1rem; transition: all 0.3s ease; cursor: pointer;">Ver mais avaliações</a>
         </div>
+        
     </div>
 </section>
 
+<!-- CSS DE SUPORTE PARA RESPONSIVIDADE -->
+<style>
+    @media (max-width: 992px) {
+        #avaliacoes > div > div:nth-child(3) {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        #avaliacoes > div > div:nth-child(3) {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+        
+        #avaliacoes h2 {
+            font-size: 1.8rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        #avaliacoes > div > div:nth-child(3) > div {
+            padding: 20px 15px !important;
+        }
+        
+        #avaliacoes .estrelas {
+            font-size: 1rem !important;
+        }
+        
+        #avaliacoes p {
+            font-size: 0.85rem !important;
+        }
+    }
+</style>
+
+<!-- FAQ -->
 <!-- FAQ -->
 <section id="faq">
     <div class="container">
         <h2 style="text-align: center;">Perguntas Frequentes</h2>
-        <p style="font-size: 1.1rem; color: #6F6F6F; margin-bottom: 50px; text-align: center;">Esclarecemos suas principais dúvidas para que você se sinta seguro(a) em cada etapa do cuidado.</p>
+        <p style="font-size: 1.1rem; color: #6F6F6F; margin-bottom: 40px; text-align: center;">Esclarecemos suas principais dúvidas para que você se sinta seguro(a) em cada etapa do cuidado.</p>
         
         <div style="max-width: 900px; margin: 0 auto;">
-            <!-- Problemas Bucais Comuns -->
-            <div class="faq-categoria">
-                <h3>Problemas Bucais Comuns</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Por que meus dentes são sensíveis?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A sensibilidade pode estar relacionada ao desgaste do esmalte, retração gengival ou bruxismo. O dentista irá avaliar a causa e indicar o tratamento mais adequado para o seu caso.</p>
-                    </div>
+            
+            <!-- CATEGORIA: Problemas Bucais Comuns - CAIXINHA -->
+            <div class="faq-categoria" style="background: #EFEAE3; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E0D9D0; overflow: hidden;">
+                <div class="faq-categoria-titulo" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 20px; background: #EFEAE3;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6B7D5A; margin: 0;">Problemas Bucais Comuns</h3>
+                    <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 1rem; transition: transform 0.3s;"></i>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O que pode causar sangramento na gengiva?</span>
-                        <i class="fas fa-chevron-down"></i>
+                
+                <!-- PERGUNTAS (INICIALMENTE OCULTAS) -->
+                <div class="faq-perguntas" style="display: none; padding: 0 15px 15px 15px; background: #EFEAE3; border-top: 1px solid #E0D9D0;">
+                    
+                    <!-- PERGUNTA 1 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Por que meus dentes são sensíveis?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">A sensibilidade pode estar relacionada ao desgaste do esmalte, retração gengival ou bruxismo. O dentista irá avaliar a causa e indicar o tratamento mais adequado.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>O sangramento geralmente está associado à gengivite, ao acúmulo de placa bacteriana ou à escovação inadequada. Quando não tratado, pode evoluir para doenças periodontais mais sérias.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Higiene Bucal -->
-            <div class="faq-categoria">
-                <h3>Higiene Bucal e Prevenção</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Como escovar corretamente os dentes?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Use uma escova de cerdas macias e faça movimentos suaves e circulares. Escove todas as superfícies dos dentes e não se esqueça da língua. O uso do fio dental é indispensável.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Com que frequência devo escovar os dentes?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>O ideal é escovar os dentes pelo menos três vezes ao dia, principalmente após as principais refeições, e usar o fio dental ao menos uma vez por dia.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Como prevenir cáries?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Com uma boa higiene bucal, alimentação equilibrada, uso de flúor e visitas regulares ao dentista para limpezas e avaliações preventivas.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O que é placa bacteriana?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A placa bacteriana é uma película que se forma sobre os dentes e pode causar cáries e inflamações gengivais. A escovação adequada e o uso do fio dental ajudam a removê-la.</p>
+                    
+                    <!-- PERGUNTA 2 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 0; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">O que pode causar sangramento na gengiva?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">O sangramento geralmente está associado à gengivite, ao acúmulo de placa bacteriana ou à escovação inadequada. Quando não tratado, pode evoluir para doenças periodontais mais sérias.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Implante -->
-            <div class="faq-categoria">
-                <h3>Implante Dentário</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Implante dentário dói?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Não. O procedimento é realizado com anestesia local, portanto não há dor durante a cirurgia. Pode haver leve desconforto nos primeiros dias, controlado com medicação.</p>
-                    </div>
+            <!-- CATEGORIA: Higiene Bucal e Prevenção - CAIXINHA -->
+            <div class="faq-categoria" style="background: #EFEAE3; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E0D9D0; overflow: hidden;">
+                <div class="faq-categoria-titulo" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 20px; background: #EFEAE3;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6B7D5A; margin: 0;">Higiene Bucal e Prevenção</h3>
+                    <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 1rem; transition: transform 0.3s;"></i>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo leva o tratamento?</span>
-                        <i class="fas fa-chevron-down"></i>
+                
+                <div class="faq-perguntas" style="display: none; padding: 0 15px 15px 15px; background: #EFEAE3; border-top: 1px solid #E0D9D0;">
+                    
+                    <!-- PERGUNTA 1 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Como escovar corretamente os dentes?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Use escova de cerdas macias e faça movimentos suaves e circulares. Escove todas as superfícies e não esqueça da língua. O fio dental é indispensável.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Geralmente leva de 3 a 6 meses, incluindo o período de cicatrização. Em alguns casos, é possível colocar um dente provisório no mesmo dia.</p>
+                    
+                    <!-- PERGUNTA 2 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Com que frequência devo escovar os dentes?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">O ideal é escovar pelo menos três vezes ao dia, após as principais refeições, e usar fio dental ao menos uma vez por dia.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Todo mundo pode colocar implante?</span>
-                        <i class="fas fa-chevron-down"></i>
+                    
+                    <!-- PERGUNTA 3 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Como prevenir cáries?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Com boa higiene bucal, alimentação equilibrada, uso de flúor e visitas regulares ao dentista.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Na maioria dos casos, sim. É necessária uma avaliação para verificar a quantidade e qualidade do osso. Algumas condições de saúde exigem cuidados específicos.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O que acontece se não substituir um dente?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A ausência de um dente pode causar perda óssea, desalinhamento da mordida e movimentação dos dentes vizinhos. O implante ajuda a evitar essas complicações.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Canal -->
-            <div class="faq-categoria">
-                <h3>Endodontia (Canal)</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Tratamento de canal dói?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Não. Com anestesia local e técnicas modernas, o procedimento é seguro e indolor. A maioria dos pacientes se surpreende com a tranquilidade do tratamento.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quando é necessário fazer canal?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Quando a polpa do dente está inflamada ou infectada, geralmente devido a cáries profundas, fraturas ou traumas. Os sinais incluem dor intensa e inchaço.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo leva o tratamento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Em muitos casos, pode ser realizado em uma única sessão. Dependendo da complexidade, pode ser necessário mais de um atendimento.</p>
+                    
+                    <!-- PERGUNTA 4 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 0; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">O que é placa bacteriana?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">É uma película que se forma sobre os dentes e pode causar cáries e inflamações. A escovação e o fio dental ajudam a removê-la.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Siso -->
-            <div class="faq-categoria">
-                <h3>Dente do Siso</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quando extrair o siso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Quando está incluso, torto, pressionando outros dentes ou causando dor, inflamação ou infecção. A decisão é baseada em avaliação clínica e radiográfica.</p>
-                    </div>
+            <!-- CATEGORIA: Implante Dentário - CAIXINHA -->
+            <div class="faq-categoria" style="background: #EFEAE3; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E0D9D0; overflow: hidden;">
+                <div class="faq-categoria-titulo" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 20px; background: #EFEAE3;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6B7D5A; margin: 0;">Implante Dentário</h3>
+                    <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 1rem; transition: transform 0.3s;"></i>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>A extração do siso dói?</span>
-                        <i class="fas fa-chevron-down"></i>
+                
+                <div class="faq-perguntas" style="display: none; padding: 0 15px 15px 15px; background: #EFEAE3; border-top: 1px solid #E0D9D0;">
+                    
+                    <!-- PERGUNTA 1 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Implante dentário dói?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Não. O procedimento é com anestesia local. Pode haver leve desconforto nos primeiros dias, controlado com medicação.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Não. O procedimento é com anestesia local. Após a cirurgia, pode haver inchaço ou desconforto nos primeiros dias, controlado com medicação.</p>
+                    
+                    <!-- PERGUNTA 2 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Quanto tempo leva o tratamento?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Geralmente de 3 a 6 meses, incluindo o período de cicatrização. Em alguns casos, é possível carga imediata.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Tirar todos de uma vez?</span>
-                        <i class="fas fa-chevron-down"></i>
+                    
+                    <!-- PERGUNTA 3 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Todo mundo pode colocar implante?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Na maioria dos casos, sim. É necessária avaliação da quantidade e qualidade do osso.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Depende do caso. Em alguns pacientes, é possível extrair dois ou até os quatro na mesma sessão. O dentista avaliará a abordagem mais segura.</p>
+                    
+                    <!-- PERGUNTA 4 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 0; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">O que acontece se não substituir um dente?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">A ausência pode causar perda óssea, desalinhamento da mordida e movimentação dos dentes vizinhos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Aparelho -->
-            <div class="faq-categoria">
-                <h3>Aparelho Ortodôntico</h3>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Idade ideal para colocar aparelho?</span>
-                        <i class="fas fa-chevron-down"></i>
+            <!-- CATEGORIA: Endodontia (Canal) - CAIXINHA -->
+            <div class="faq-categoria" style="background: #EFEAE3; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E0D9D0; overflow: hidden;">
+                <div class="faq-categoria-titulo" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 20px; background: #EFEAE3;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6B7D5A; margin: 0;">Endodontia (Canal)</h3>
+                    <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 1rem; transition: transform 0.3s;"></i>
+                </div>
+                
+                <div class="faq-perguntas" style="display: none; padding: 0 15px 15px 15px; background: #EFEAE3; border-top: 1px solid #E0D9D0;">
+                    
+                    <!-- PERGUNTA 1 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Tratamento de canal dói?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Não. Com anestesia local, o procedimento é seguro e indolor. A maioria se surpreende com a tranquilidade.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Não existe idade única. A primeira avaliação é recomendada por volta dos 7 anos, mas o tratamento pode ser feito em crianças, adolescentes e adultos.</p>
+                    
+                    <!-- PERGUNTA 2 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Quando é necessário fazer canal?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Quando a polpa está inflamada ou infectada por cáries profundas, fraturas ou traumas.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PERGUNTA 3 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 0; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Quanto tempo leva o tratamento?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Em muitos casos, em uma única sessão. Dependendo da complexidade, pode ser necessário mais de um atendimento.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo dura o tratamento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Em média, entre 18 e 36 meses, dependendo da complexidade do caso e da colaboração do paciente.</p>
-                    </div>
+            </div>
+
+            <!-- CATEGORIA: Dente do Siso - CAIXINHA -->
+            <div class="faq-categoria" style="background: #EFEAE3; border-radius: 12px; margin-bottom: 15px; border: 1px solid #E0D9D0; overflow: hidden;">
+                <div class="faq-categoria-titulo" style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 20px; background: #EFEAE3;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: #6B7D5A; margin: 0;">Dente do Siso</h3>
+                    <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 1rem; transition: transform 0.3s;"></i>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Tipos de aparelho disponíveis?</span>
-                        <i class="fas fa-chevron-down"></i>
+                
+                <div class="faq-perguntas" style="display: none; padding: 0 15px 15px 15px; background: #EFEAE3; border-top: 1px solid #E0D9D0;">
+                    
+                    <!-- PERGUNTA 1 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Quando extrair o siso?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Quando incluso, torto, pressionando outros dentes ou causando dor, inflamação ou infecção.</p>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Aparelho fixo tradicional (metálico), aparelho estético (safira) e alinhadores transparentes. O profissional orientará a melhor opção.</p>
+                    
+                    <!-- PERGUNTA 2 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 10px; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">A extração do siso dói?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Não. Com anestesia local. Pode haver inchaço ou desconforto nos primeiros dias.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PERGUNTA 3 - CAIXINHA -->
+                    <div class="faq-item" style="background: #F5F2EC; border-radius: 12px; margin-bottom: 0; border: 1px solid #E0D9D0; overflow: hidden;">
+                        <div class="faq-pergunta-titulo" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 15px; cursor: pointer; background: #F5F2EC;">
+                            <span style="font-size: 1rem; font-weight: 500; color: #6F6F6F;">Tirar todos de uma vez?</span>
+                            <i class="fas fa-chevron-down" style="color: #6B7D5A; font-size: 0.9rem; transition: transform 0.3s;"></i>
+                        </div>
+                        <div class="faq-resposta" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: #F5F2EC; padding: 0 15px;">
+                            <p style="padding: 12px 0; margin: 0; border-top: 1px solid #E0D9D0; color: #6F6F6F; font-size: 0.9rem;">Depende do caso. Em alguns pacientes, é possível extrair dois ou até os quatro na mesma sessão.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="btn-faq">
-            <a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas" target="_blank">Falar com a Amey Clinic</a>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://wa.me/5511995871061?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas" target="_blank" style="font-weight: 500; color: #F5F2EC; background: #6B7D5A; border: 1px solid #6B7D5A; border-radius: 24px; padding: 12px 32px; text-decoration: none; display: inline-block; font-size: 1rem; transition: all 0.3s ease;">Falar com a Amey Clinic</a>
         </div>
     </div>
 </section>
+
+<!-- JavaScript para o FAQ -->
+<script>
+    // Abrir/fechar categorias
+    document.querySelectorAll('.faq-categoria-titulo').forEach(titulo => {
+        titulo.addEventListener('click', function() {
+            const categoria = this.closest('.faq-categoria');
+            const perguntas = categoria.querySelector('.faq-perguntas');
+            const icon = this.querySelector('i');
+            
+            if (perguntas.style.display === 'none' || perguntas.style.display === '') {
+                perguntas.style.display = 'block';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                perguntas.style.display = 'none';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+
+    // Abrir/fechar respostas das perguntas
+    document.querySelectorAll('.faq-pergunta-titulo').forEach(pergunta => {
+        pergunta.addEventListener('click', function() {
+            const resposta = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            if (resposta.style.maxHeight === '0px' || resposta.style.maxHeight === '') {
+                resposta.style.maxHeight = resposta.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                resposta.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    });
+</script>
 
 <!-- BLOCO FINAL -->
 <section style="padding: 40px 0; background: #F5F2EC;">
@@ -1857,229 +2021,78 @@ você escolha com segurança.
     </div>
 </section>
 
-
-
 <!-- RODAPÉ -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Fale Conosco</h4>
-                <p><i class="fas fa-phone"></i> (11) 2037-1867</p>
-                <p><i class="fab fa-whatsapp"></i> (11) 95640-2651</p>
+<!-- RODAPÉ -->
+<footer style="background: #6E6E6E; color: #F5F2EC; padding: 30px 0 15px; width: 100%;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%;">
+        
+        <!-- GRID PRINCIPAL - MAIS COMPACTADO -->
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr 0.8fr; gap: 30px; margin-bottom: 15px;">
+            
+            <!-- COLUNA 1: Fale Conosco -->
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #dbd7cd; font-weight: 600;">Fale Conosco</h4>
+                <p style="color: #dbd7cd; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                    <i class="fas fa-phone" style="color: #dbd7cd; width: 18px;"></i> (11) 2037-1867
+                </p>
+                <p style="color: #dbd7cd; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 0.9rem;">
+                    <i class="fab fa-whatsapp" style="color: #dbd7cd; width: 18px;"></i> (11) 99587-1061
+                </p>
             </div>
-            <div class="footer-col">
-                <h4>Nosso Endereço</h4>
-                <p>R. Tenente Luís Fernando Lobo, 138</p>
-                <p>São Miguel Paulista – São Paulo/SP</p>
-                <p>08010-060</p>
-                <p><a href="#" style="color: #dbd7cd; text-decoration: underline; margin-top: 5px; display: inline-block;"><i class="fas fa-map"></i> Ver no mapa</a></p>
+            
+            <!-- COLUNA 2: Nosso Endereço -->
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #dbd7cd; font-weight: 600;">Nosso Endereço</h4>
+                <p style="color: #dbd7cd; margin-bottom: 5px; font-size: 0.9rem;">R. Tenente Luís Fernando Lobo, 138</p>
+                <p style="color: #dbd7cd; margin-bottom: 5px; font-size: 0.9rem;">São Miguel Paulista – São Paulo/SP</p>
+                <p style="color: #dbd7cd; margin-bottom: 8px; font-size: 0.9rem;">08010-060</p>
+                <p><a href="#" style="color: #dbd7cd; text-decoration: underline; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 5px;"><i class="fas fa-map" style="font-size: 0.8rem;"></i> Ver no mapa</a></p>
             </div>
-            <div class="footer-col">
-                <h4>Horário</h4>
-                <p>Segunda a Sexta<br>09h às 19h</p>
-                <p>Sábados<br>09h às 16h</p>
+            
+            <!-- COLUNA 3: Horário -->
+            <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 12px; color: #dbd7cd; font-weight: 600;">Horário</h4>
+                <p style="color: #dbd7cd; margin-bottom: 8px; font-size: 0.9rem;">Segunda a Sexta<br>09h às 19h</p>
+                <p style="color: #dbd7cd; margin-bottom: 8px; font-size: 0.9rem;">Sábados<br>09h às 16h</p>
             </div>
+            
         </div>
 
-        <!-- BLOCO CENTRAL DA MARCA - COMPACTADO -->
-        <div class="footer-brand">
-            <div class="footer-logo">
-                <img src="logoameybranco.png" alt="Amey Clinic">
-            </div>
-            <p class="footer-tagline">“Cuidando do seu sorriso, cuidando de você.”</p>
-            <div class="social-links">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
+       <!-- BLOCO CENTRAL DA MARCA - LOGO E FRASE SUPER PRÓXIMAS -->
+<div style="text-align: center; margin: 5px 0 10px;">
+    
+    <!-- LOGO AUMENTADO -->
+    <div style="margin-bottom: 0px; line-height: 0;">
+        <img src="logoameybranco.png" alt="Amey Clinic" style="height: 220px; width: auto; display: inline-block;">
+    </div>
+    
+    <!-- FRASE INSTITUCIONAL - COLADA NA LOGO -->
+    <p style="font-style: italic; color: #dbd7cd; font-size: 0.95rem; margin-top: -5px; margin-bottom: 8px; line-height: 1.1;">“Cuidando do seu sorriso, cuidando de você.”</p>
+    
+    <!-- REDES SOCIAIS -->
+    <div style="display: flex; justify-content: center; gap: 15px;">
+        <a href="#" aria-label="Instagram" style="color: #F5F2EC; font-size: 1.2rem; transition: opacity 0.3s; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook" style="color: #F5F2EC; font-size: 1.2rem; transition: opacity 0.3s; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+</div>
 
-        <div class="footer-bottom">
-            <p>Amey Clinic — CRO-CL: 034587 | RT: Dra. Letícia Marcelino Moreira — CRO-SP: 128996</p>
-            <p>© 2026 Amey Clinic. Todos os direitos reservados.</p>
+        <!-- RODAPÉ LEGAL - MAIS COMPACTADO -->
+        <div style="border-top: 1px solid rgba(245,242,236,0.2); padding-top: 12px; text-align: center; color: #dbd7cd; font-size: 0.75rem; line-height: 1.4;">
+            <p style="margin-bottom: 3px;">Amey Clinic — CRO-CL: 034587 | RT: Dra. Letícia Marcelino Moreira — CRO-SP: 128996</p>
+            <p style="margin-bottom: 0;">© 2026 Amey Clinic. Todos os direitos reservados.</p>
         </div>
+        
     </div>
 </footer>
 
-<!-- CSS PARA O RODAPÉ AJUSTADO -->
-<style>
-/* ===== RODAPÉ AJUSTADO ===== */
+<!-- WHATSAPP BUTTON (caso queira manter) -->
+<a href="https://wa.me/5511995871061?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site" target="_blank" style="position: fixed; bottom: 30px; right: 30px; background: #6B7D5A; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; border: 1px solid #F5F2EC; z-index: 999; color: #F5F2EC; transition: all 0.3s ease;">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
-footer {
-    background: #6E6E6E;
-    color: #F5F2EC;
-    padding: 60px 0 30px;
-}
-
-/* GRID PRINCIPAL */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr 0.8fr; /* melhora alinhamento */
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-/* COLUNAS */
-.footer-col h4 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #dbd7cd;
-    font-weight: 600;
-}
-
-.footer-col p {
-    color: #dbd7cd;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.footer-col i {
-    color: #dbd7cd;
-    width: 20px;
-}
-
-/* EMPURRAR HORÁRIO MAIS PARA DIREITA */
-.footer-col:nth-child(3){
-    margin-left: 60px;
-}
-
-.footer-col a {
-    color: #dbd7cd;
-    text-decoration: underline;
-    transition: opacity 0.3s;
-}
-
-.footer-col a:hover {
-    opacity: 0.8;
-}
-
-/* ===== BLOCO CENTRAL DA MARCA ===== */
-
-.footer-brand {
-    text-align: center;
-    margin: 20px 0 25px;
-}
-
-/* LOGO MAIOR */
-.footer-logo {
-    margin-bottom: 6px;
-}
-
-.footer-logo img {
-    height: 185px; /* aumentado */
-    width: auto;
-    display: inline-block;
-}
-
-/* FRASE */
-.footer-tagline {
-    font-style: italic;
-    color: #dbd7cd;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    line-height: 1.3;
-}
-
-/* REDES SOCIAIS */
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-}
-
-.social-links a {
-    color: #F5F2EC;
-    font-size: 1.4rem;
-    transition: opacity 0.3s;
-    display: inline-block;
-}
-
-.social-links a:hover {
-    opacity: 0.8;
-}
-
-/* ===== RODAPÉ LEGAL ===== */
-
-.footer-bottom {
-    border-top: 1px solid rgba(245,242,236,0.3);
-    padding-top: 20px;
-    text-align: center;
-    color: #dbd7cd;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.footer-bottom p {
-    margin-bottom: 5px;
-}
-
-/* ===== RESPONSIVIDADE ===== */
-
-@media (max-width: 768px) {
-
-.footer-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
-    text-align: left;
-}
-
-.footer-col:nth-child(3){
-    margin-left: 0;
-}
-
-.footer-col p {
-    justify-content: flex-start;
-}
-
-.footer-logo img {
-    height: 150px;
-}
-
-.footer-tagline {
-    font-size: 1rem;
-    margin-bottom: 6px;
-}
-
-.social-links {
-    gap: 22px;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-}
-
-.footer-bottom {
-    font-size: 0.85rem;
-}
-
-}
-
-@media (max-width: 480px) {
-
-.footer-logo img {
-    height: 120px;
-}
-
-.footer-tagline {
-    font-size: 0.95rem;
-}
-
-.social-links {
-    gap: 20px;
-}
-
-.footer-bottom {
-    font-size: 0.8rem;
-}
-
-}
-</style>
 <!-- WHATSAPP -->
-<a href="https://wa.me/5511956402651?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/5511995871061?text=Oi%2C%20encontrei%20voc%C3%AAs%20pelo%20site" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -2088,18 +2101,33 @@ footer {
         document.querySelector('.nav-links').classList.toggle('active');
     });
 
+    // FAQ - Categorias
+    document.querySelectorAll('.faq-categoria-titulo').forEach(categoria => {
+        categoria.addEventListener('click', function() {
+            const container = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            
+            // Fecha outras categorias (opcional)
+            document.querySelectorAll('.faq-perguntas-container').forEach(item => {
+                if (item !== container && item.classList.contains('show')) {
+                    item.classList.remove('show');
+                    item.previousElementSibling.classList.remove('active');
+                }
+            });
+            
+            container.classList.toggle('show');
+            this.classList.toggle('active');
+        });
+    });
+
+    // FAQ - Perguntas individuais
     document.querySelectorAll('.faq-question').forEach(item => {
         item.addEventListener('click', function() {
             const answer = this.nextElementSibling;
-            const icon = this.querySelector('.fa-chevron-down');
+            const icon = this.querySelector('i');
             
-            if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
-            } else {
-                answer.style.maxHeight = '0';
-                icon.style.transform = 'rotate(0deg)';
-            }
+            answer.classList.toggle('show');
+            icon.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
         });
     });
 
